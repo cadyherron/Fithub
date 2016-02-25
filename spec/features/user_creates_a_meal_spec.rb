@@ -15,7 +15,7 @@ feature 'User creates a meal' do
     visit new_meal_path
     find('#food_search').set('apple')
     click_button "Search"
-    expect(page).to have_content 'Apple - 1 cup slices'
+    expect(page).to have_content 'apple'
   end
 
 end
