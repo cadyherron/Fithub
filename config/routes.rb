@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :activities, only: [:index, :show, :create]
+  resources :user_activities
+
   root 'users#new'
   resources :dashboard, only: [:show]
 
@@ -8,7 +11,7 @@ Rails.application.routes.draw do
   get "login" => "sessions#new"
   delete "logout" => "sessions#destroy"
 
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
