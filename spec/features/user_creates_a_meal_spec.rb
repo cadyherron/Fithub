@@ -1,6 +1,16 @@
 require 'rails_helper'
 
+require 'vcr'
+require 'webmock'
+
+VCR.configure do |c|
+  c.cassette_library_dir     = 'spec/cassettes'
+  c.hook_into                :webmock
+end
+
+
 feature 'User creates a meal' do
+
 
   let(:user) { create(:user) }
 
@@ -13,7 +23,6 @@ feature 'User creates a meal' do
 
 
   scenario 'they search for meal items' do
-
     VCR.use_cassette("apple") do
       visit new_meal_path
       find('#food_search').set('apple')
