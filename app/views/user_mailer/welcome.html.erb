@@ -1,0 +1,13 @@
+<h1>Welcome!</h1>
+
+<p>
+  Hi <%= @user.first_name %>, welcome to Fithub!
+</p>
+
+<p>
+  View your account at <%= link_to "#{user_url(@user.id)}", user_url(@user.id) %>
+</p>
+
+
+<p>Thanks for joining us,</p>
+<p>The Fithub Team</p>
