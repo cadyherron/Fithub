@@ -1,5 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe DashboardController, type: :controller do
+describe DashboardController do
 
+  it "tautologies" do
+    expect(1).to eq(1)
+  end
+  
 end
