@@ -17,9 +17,19 @@ div.navbar-header > a.navbar-brand {
   color: #c6f;
  }
 
- body {
+ body, .spacer {
   padding-top: 70px;
  }
+
+input.btn.btn-default.btn-xl.btn-block {
+  padding: 28px 20px;
+  font-size: 20px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #c6f;
+}
+
 
 
 @import "bootstrap-sprockets";

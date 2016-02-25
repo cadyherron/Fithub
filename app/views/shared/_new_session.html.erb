@@ -1,0 +1,19 @@
+<%= form_tag session_path do %>
+
+  <%= label_tag do %>
+    Remember me?
+    <%= check_box_tag :remember_me %>
+  <% end %>
+
+  <%= label_tag do %>
+    Email
+    <%= text_field_tag :email %>
+  <% end %>
+
+  <%= label_tag do %>
+    Password
+    <%= password_field_tag :password %>
+  <% end %>
+
+  <%= submit_tag "Log in" %>
+<% end %>

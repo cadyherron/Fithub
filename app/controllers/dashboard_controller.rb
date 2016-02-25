@@ -1,6 +1,7 @@
 class DashboardController < ApplicationController
+  include Analytics
 
-  def index
+  def show
   end
 
 
