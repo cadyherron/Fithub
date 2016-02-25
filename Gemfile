@@ -25,8 +25,7 @@ gem 'httparty'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'faker'
-gem 'vcr'
-gem 'webmock'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -47,6 +46,8 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'launchy'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development, :test do
