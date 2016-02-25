@@ -11,11 +11,16 @@ feature 'User creates a meal' do
     click_on("Log in")
   end
 
+
   scenario 'they search for meal items' do
-    visit new_meal_path
-    find('#food_search').set('apple')
-    click_button "Search"
-    expect(page).to have_content 'apple'
+
+    VCR.use_cassette("apple") do
+      visit new_meal_path
+      find('#food_search').set('apple')
+      click_button "Search"
+      expect(page).to have_selector('#food_name[value="Apple - 1 cup slices"]') 
+    end
+    
   end
 
 end

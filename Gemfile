@@ -25,7 +25,8 @@ gem 'httparty'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'faker'
-gem 'delayed_job_active_record'
+gem 'vcr'
+gem 'webmock'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
