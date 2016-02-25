@@ -1,5 +1,14 @@
 require 'rails_helper'
 
+require 'vcr'
+require 'webmock'
+
+VCR.configure do |c|
+  c.cassette_library_dir     = 'spec/cassettes'
+  c.hook_into                :webmock
+end
+
+
 feature 'User creates a meal' do
 
 

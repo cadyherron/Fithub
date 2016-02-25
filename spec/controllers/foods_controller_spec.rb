@@ -10,8 +10,9 @@ describe FoodsController do
 
   before :each do
     user
-    controller.send( :sign_in, user ) 
-    request.env['HTTP_REFERER'] = root_url
+    controller.send( :sign_in, user )
+    WebMock.disable!
+    request.env['HTTP_REFERER'] = meal_url( create_meal )
   end
 
   describe "POST #add_to_meal" do
@@ -31,13 +32,15 @@ describe FoodsController do
   end
 
   describe "POST #search" do
-    it "adds 1 to meal foods" do
-      post :search, { 
-          :food_search => bad_search, :meal_id => create_meal.id }
-      expect(response).to redirect_to( :back )
+    it "bad search redirects back" do
+          # VCR.use_cassette(:bad_search) do
+        post :search, { 
+            :food_search => bad_search, :meal_id => create_meal.id }
+        expect(response).to redirect_to( :back )
+      # end
     end
 
-    it "ridirects to meal" do
+    it "good search renders search" do
       #attributes_for is FactoryGirl method
       post :search, { 
           :food_search => good_search, :meal_id => create_meal.id }
