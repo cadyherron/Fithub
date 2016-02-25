@@ -1,0 +1,42 @@
+<h1>Suggestions for <%=@food_search%></h1>
+<div class="row">
+  <div class="col-sm-12">
+    <table class="table">
+      <thead>
+        <th>Name</th>
+        <th>Calories</th>
+      </thead>
+      <tbody>
+        <% @foods.each do |food| %>
+          <%= form_for food, url: { action: 'add_to_meal' } do |f| %>
+            <tr>
+              <td>
+                <div class="form-group">
+                  <%= f.label :name %>
+                  <%= f.text_field :name, class: 'form-control'  %>
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <%= f.label :calories %>
+                  <%= f.text_field :calories, class: 'form-control' %>
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <%= f.label :quantity %>
+                  <%= f.text_field :quantity, class: 'form-control' %>
+                </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <%= f.submit 'Add To Meal' %>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

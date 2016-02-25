@@ -1,0 +1,23 @@
+<h1 class='page-header'>Meal</h1>
+
+<%= form_tag search_meal_foods_path(@meal), method: :get, id: 'search_form' do %>
+  <%= label_tag :food_search %>
+  <%= text_field_tag :food_search %>
+  <%= submit_tag "Search" %>
+<%end%>
+
+<div class="row">
+  <div class="col-sm-12">
+    <table class="table">
+      <thead>
+        <th>Name</th>
+        <th>Calories</th>
+        <th>Quantity</th>
+        <th>Delete</th>
+      </thead>
+      <tbody>
+        <%= render @meal.foods %>
+      </tbody>
+    </table>
+  </div>
+</div>

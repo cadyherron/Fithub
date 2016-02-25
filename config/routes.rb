@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
+  resources :meals do
+    post 'add_food'
+    resources :foods do
+      collection do
+        get 'search'
+        post 'add_to_meal'
+      end
+    end
+  end
+
+  root 'dashboard#index'
 
   resources :activities, only: [:index, :show, :create]
   resources :user_activities
-
-  root 'users#new'
   resources :dashboard, only: [:show]
 
   resources :users
