@@ -13,6 +13,10 @@
  *= require_tree .
  */
 
+div.navbar-header > a.navbar-brand {
+  color: #c6f;
+ }
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
