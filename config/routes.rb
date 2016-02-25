@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'dashboard#index'
   resources :dashboard, only: [:index]
 
-  resources :user
+  resources :users
   resource :session, only: [:new, :create, :destroy]
   get "login" => "sessions#new"
   delete "logout" => "sessions#destroy"
