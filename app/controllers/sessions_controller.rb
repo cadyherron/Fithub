@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
       end
 
       flash[:success] = "You've successfully signed in"
-      redirect_to dashboard_path(current_user)
+      redirect_to dashboard_index_path
     else
       flash.now[:error] = "We couldn't sign you in"
       logger.info "User login failed..."
