@@ -1,14 +1,10 @@
-<%= link_to "Sign Up", new_user_path %>
+<h1>Welcome to Fithub!</h1>
 
+<h3 class="spacer">Sign In</h3>
 
 <%= form_tag session_path do %>
 
-  <%= label_tag do %>
-    Remember me?
-    <%= check_box_tag :remember_me %>
-  <% end %>
-
-  <%= label_tag do %>
+<%= label_tag do %>
     Email
     <%= text_field_tag :email %>
   <% end %>
@@ -18,5 +14,19 @@
     <%= password_field_tag :password %>
   <% end %>
 
-  <%= submit_tag "Log in" %>
+  <%= label_tag do %>
+    Remember me?
+    <%= check_box_tag :remember_me %>
+  <% end %>
+
+
+  <%= submit_tag "Log in", class: 'btn btn-default' %>
 <% end %>
+
+
+
+<h3 class="spacer">Not a member yet?
+<%= link_to "Sign Up", new_user_path %>
+</h3>
+
+
