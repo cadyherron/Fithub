@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+<<<<<<< HEAD
 describe UserActivity do
 
   let(:user){ create(:user)}
@@ -68,3 +69,5 @@ describe UserActivity do
   end
 
 end
+=======
+>>>>>>> 3992f5738997757f08e7c1d0c4ea7b9b966194e4

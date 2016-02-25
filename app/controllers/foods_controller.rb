@@ -20,6 +20,21 @@ class FoodsController < ApplicationController
     end
   end
 
+  def edit
+    @meal = Meal.find(params[:meal_id])
+    @food = Food.find(params[:id])
+  end
+
+  def update
+    @meal = Meal.find(params[:meal_id])
+    @food = Food.find(params[:id])
+    if @food.update(food_params)
+      redirect_to @meal
+    else
+      redirect_to :back
+    end
+  end
+
   def destroy
     @food = Food.find(params[:id])
     @food.destroy
