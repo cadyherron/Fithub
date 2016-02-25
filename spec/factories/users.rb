@@ -6,4 +6,10 @@ FactoryGirl.define do
     password "football"
     password_confirmation "football"
   end
+
+  factory :user_with_no_password, :class => :user do
+    name  "No Password"
+    email "nopasword@aol.com"
+  end
+  
 end
