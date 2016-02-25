@@ -1,7 +1,10 @@
 class DashboardController < ApplicationController
   include Analytics
 
-  def show
+  before_action :require_login
+
+
+  def index
   end
 
 end
