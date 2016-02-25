@@ -14,10 +14,10 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Meals</a></li>
-        <li><a href="#">Workouts</a></li>
-        <li><a href="#">Goals</a></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Meals", root_path %></li>
+        <li><%= link_to "Workouts", root_path %></li>
+        <li><%= link_to "Goals", root_path %></li>
 
         <% if signed_in_user? %>
           <li><%= link_to "Logout", logout_path, :method => :delete %></li>
@@ -27,12 +27,17 @@
         <% end %>
 
       </ul>
-      <form class="navbar-form navbar-right" role="search">
+      <div class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <div class="search-bar">
+          <!-- TODO: switch to users_path -->
+            <%= form_tag root_path, :method => 'get' do %>
+              <%= text_field_tag :query, params[:query], placeholder: "Search for users", class: "form-control" %>
+              <%= submit_tag "Go", class: "form-control" %>
+            <% end %>
+          </div>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
