@@ -1,6 +1,11 @@
 == Welcome to Fithub!
 
 Live website hosted on Heroku:
+...
+
+
+Feature tour:
+
 
 
 To run locally:
