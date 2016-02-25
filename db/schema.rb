@@ -28,6 +28,25 @@ ActiveRecord::Schema.define(version: 20160225190138) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "foods", force: :cascade do |t|
+    t.string   "name"
+    t.string   "calories"
+    t.string   "sodium"
+    t.string   "brand"
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
+    t.integer  "meal_id"
+    t.decimal  "quantity",   precision: 8, scale: 2, default: 1.0
+  end
+
+  add_index "foods", ["meal_id"], name: "index_foods_on_meal_id", using: :btree
+
+  create_table "meals", force: :cascade do |t|
+    t.string   "meal_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "user_activities", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "activity_id"
@@ -50,4 +69,6 @@ ActiveRecord::Schema.define(version: 20160225190138) do
   end
 
   add_index "users", ["auth_token"], name: "index_users_on_auth_token", unique: true, using: :btree
+
+  add_foreign_key "foods", "meals"
 end
