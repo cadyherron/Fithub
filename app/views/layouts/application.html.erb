@@ -8,8 +8,9 @@
 </head>
 <body>
 
+<% if current_user %>
 <%= render partial: "shared/navbar" %>
-
+<% end %>
 
 <div class="container">
   <%= yield %>

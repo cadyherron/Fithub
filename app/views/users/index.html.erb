@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Search results for "<%= params[:query] %>":</h1>
+
+  <div class="row">
+
+  <% @users.each do |user| %>
+    <div class="col-sm-4">
+      <%= render partial: 'user', locals: { user: user } %>
+    </div>
+  <% end %>
+
+  </div>
+</div>

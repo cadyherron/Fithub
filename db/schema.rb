@@ -16,29 +16,38 @@ ActiveRecord::Schema.define(version: 20160225190138) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "activities", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "calories_per_hour"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
   create_table "dashboards", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "foods", force: :cascade do |t|
-    t.string   "name"
-    t.string   "calories"
-    t.string   "sodium"
-    t.string   "brand"
-    t.datetime "created_at",                                       null: false
-    t.datetime "updated_at",                                       null: false
-    t.integer  "meal_id"
-    t.decimal  "quantity",   precision: 8, scale: 2, default: 1.0
+  create_table "user_activities", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "activity_id"
+    t.string   "intensity"
+    t.integer  "calories"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "duration_minutes"
   end
 
-  add_index "foods", ["meal_id"], name: "index_foods_on_meal_id", using: :btree
-
-  create_table "meals", force: :cascade do |t|
-    t.string   "meal_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name",      null: false
+    t.string   "last_name",       null: false
+    t.string   "email",           null: false
+    t.string   "password_digest"
+    t.string   "auth_token"
+    t.string   "string"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
-  add_foreign_key "foods", "meals"
+  add_index "users", ["auth_token"], name: "index_users_on_auth_token", unique: true, using: :btree
 end

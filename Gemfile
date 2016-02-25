@@ -22,7 +22,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'httparty'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'faker'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -57,4 +59,7 @@ gem 'binding_of_caller'
 gem 'figaro'
 gem 'bootstrap-sass'
 gem 'delayed_job_active_record'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem 'aws-sdk', '>= 2.0.0'
+
 
