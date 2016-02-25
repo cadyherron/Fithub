@@ -1,1 +1,77 @@
-<h1>Welcome to the dashboard</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 text-center">
+      <%= image_tag 'user_silhouette_generic.gif' %>
+      <h3>Welcome, user!</h3>
+    </div>
+
+    <div class="col-sm-9">
+      <div class="col-sm-4 spacer">
+      <%= button_to "Add a new meal", {}, class: "btn btn-default btn-xl btn-block" %>
+      </div>
+
+      <div class="col-sm-4 spacer">
+      <%= button_to "Add a new workout", {}, class: "btn btn-default btn-xl btn-block"  %>
+      </div>
+
+      <div class="col-sm-4 spacer">
+      <%= button_to "Add a new goal", {}, class: "btn btn-default btn-xl btn-block"  %>
+      </div>
+    </div> <!-- new buttons -->
+
+  </div> <!-- row -->
+
+
+  <div class="row spacer">
+
+    <div class='col-sm-4'>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Total Calories Consumed</h3>
+        </div>
+        <div class="panel-body">
+          ONE BILLION
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class='col-sm-4'>
+    
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Total Calories Burned</h3>
+        </div>
+        <div class="panel-body">
+          ONE BILLION
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class='col-sm-4'>
+    
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Lead Goal Crushers</h3>
+        </div>
+        <div class="panel-body">
+          <ol>
+          <li>Deepa</li>
+          <li>John</li>
+          <li>Kit</li>
+          <li>Thomas</li>
+          <li>Julia</li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+
+  </div> <!-- row -->
+
+
+</div> <!-- container -->
