@@ -61,14 +61,21 @@
 
     <br> 
 
-    <% if scope == "to-date" %> 
-       <%= link_to "Show/Log workout for today", 
-                    new_user_activity_path(user_id: @user_id),
-                    class: "btn btn-info btn-xs" %>
-    <% else %>
-      <%= link_to "Show all workouts to date", 
-                  user_activities_path(user_id: @user_id),
-                  class: "btn btn-info btn-xs" %>
-    <% end %>
-
-    
+    <div class="row nav-paths">
+      <div class="col-md-4"> 
+        <% if scope == "to-date" %> 
+           <%= link_to "Show/Log workout for today", 
+                       new_user_activity_path,
+                       class: "btn btn-info btn-xs" %>
+        <% else %>
+          <%= link_to "Show all workouts to date", 
+                      user_activities_path,
+                     class: "btn btn-info btn-xs" %>
+        <% end %>
+      </div>
+      <div class="col-md-4">
+        <%= link_to "Back to dashboard", 
+                     dashboard_index_path,
+                     class: "btn btn-info btn-xs" %>
+      </div>
+    </div>  
