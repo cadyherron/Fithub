@@ -62,7 +62,7 @@ describe UserActivity do
   describe 'creates_nultiple_activities_for_user'  do  
     it "creates 5 same activity times for a user " do
       new_activities = create_list(:user_activity, 5, user: user)
-      expect(user.new_activities.count).to eq(5)
+      expect(user.user_activities.count).to eq(5)
     end
 
   end

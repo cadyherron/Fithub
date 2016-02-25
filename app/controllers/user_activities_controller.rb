@@ -40,7 +40,6 @@ class UserActivitiesController < ApplicationController
 
   end
 
-
   private
   def user_activity_params
       params.require(:user_activity).permit(
