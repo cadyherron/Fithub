@@ -8,9 +8,9 @@
 </head>
 <body data-no-turbolink>
 
-
+<% if current_user %>
 <%= render partial: "shared/navbar" %>
-
+<% end %>
 
 <%= yield %>
 
