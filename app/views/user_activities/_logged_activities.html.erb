@@ -1,0 +1,74 @@
+  <table class="table-bordered table-striped">
+      <thead>
+        <tr>
+
+          <% if scope == "to-date" %> 
+            <th>
+              <h5 class="label label-primary">Workout Date</h5>
+            </th>
+          <% end %>
+
+          <th>
+            <h5 class="label label-primary">Workout Name</h5>
+          </th>
+          <th>
+            <h5 class="label label-primary">Calories</h5>
+          </th>
+          <th>
+            <h5 class="label label-primary">Duration(Mins)</h5>
+          </th>
+          <th>
+            <h5 class="label label-primary">Intensity</h5>
+          </th>
+          <th>
+            <h5 class="label label-primary">Remove Workout
+            </h5>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @user_activities.each do |user_activity| %>
+
+          <tr>
+            <% if scope == "to-date" %> 
+              <td>
+                <%= user_activity.created_at.strftime("%b, %d %Y") %> 
+              </td>
+            <% end %>
+            <td>
+              <%= user_activity.activity.name %>
+            </td>  
+            <td> 
+              <%= user_activity.calories %>
+            </td>
+            <td> 
+              <%= user_activity.duration_minutes %>
+            </td>  
+            <td> 
+              <%= user_activity.intensity %>
+            </td>
+            <td>
+              <%= link_to "Remove", 
+                          user_activity_path(user_activity.id),
+                          method: :delete,
+                          class: "btn btn-warning btn-xs" %> 
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    <table>
+
+    <br> 
+
+    <% if scope == "to-date" %> 
+       <%= link_to "Show/Log workout for today", 
+                    new_user_activity_path(user_id: @user_id),
+                    class: "btn btn-info btn-xs" %>
+    <% else %>
+      <%= link_to "Show all workouts to date", 
+                  user_activities_path(user_id: @user_id),
+                  class: "btn btn-info btn-xs" %>
+    <% end %>
+
+    

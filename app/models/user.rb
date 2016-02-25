@@ -2,6 +2,10 @@ class User < ActiveRecord::Base
   include Searchable
 
 
+ 
+  has_many :user_activities
+
+
   before_create :generate_token
 
   has_secure_password
