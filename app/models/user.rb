@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   include Searchable
 
-
+  has_many :meals, dependent: :destroy
  
   has_many :user_activities
 
@@ -31,5 +31,8 @@ class User < ActiveRecord::Base
     save!
   end
 
+  def total_calories
+    self.meals.inject(0) {|sum, meal| sum += meal.total_calories }
+  end
 
 end
