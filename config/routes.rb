@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :activities, only: [:index, :show, :create]
   resources :user_activities
-  resources :dashboard, only: [:show]
+  resources :dashboard, only: [:index]
 
   resources :users
   resource :session, only: [:new, :create, :destroy]
