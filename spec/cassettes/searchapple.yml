@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.nutritionix.com/v1_1/search/
+    body:
+      encoding: UTF-8
+      string: '{"appId":null,"appKey":null,"query":"Apple","fields":["item_name","nf_calories"]}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type, X-Requested-With, X-APP-ID, X-APP-KEY
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 25 Feb 2016 18:23:37 GMT
+      Server:
+      - nginx/1.6.2 + Phusion Passenger
+      Set-Cookie:
+      - session=ZWOoLZ_StNITBG8uDcYvrA.8aeUluSSvIdaGzpIkxrlqTf2zeCggWTX8kusAAUwpAY.1456424617785.86400000._RL4kVWr55M58SjuYWCyl3W3nBcjQBfbbELrAv5zJ84;
+        path=/; expires=Sat, 26 Mar 2016 18:23:37 GMT
+      Status:
+      - 401 Unauthorized
+      X-Powered-By:
+      - Express
+      - Phusion Passenger
+      Content-Length:
+      - '122'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"appId":{"param":"appId","msg":"must provide valid appId"},"appKey":{"param":"appKey","msg":"must
+        provide valid appKey"}}'
+    http_version: 
+  recorded_at: Thu, 25 Feb 2016 18:23:03 GMT
+recorded_with: VCR 3.0.1

@@ -1,5 +1,4 @@
 class Nutritionix
-
   def initialize
     @appId = Rails.application.secrets.app_id
     p @appId
@@ -8,15 +7,29 @@ class Nutritionix
   end
 
   def search(food)
-    @result = HTTParty.post(@site,
-      body: { appId: @appId,
-              appKey: @appKey,
-              query: food,
-              fields: ["item_name", "nf_calories"]
+    @json = HTTParty.post(@site,
+                            body: { appId: @appId,
+                                    appKey: @appKey,
+                                    query: food,
+                                    fields: ["item_name", "nf_calories"]
 
-      }.to_json,
-      headers: { 'Content-Type' => 'application/json' }
-      ).parsed_response
+    }.to_json,
+    headers: { 'Content-Type' => 'application/json' }
+                           ).parsed_response
+    to_food
   end
 
+  def to_food
+    return [] unless @json['hits']
+    results = []
+    @json['hits'].each do |result|
+      food = Food.new
+      food.name = result['fields']['item_name']
+      food.calories = result['fields']['nf_calories']
+      food.quantity = 1
+      results << food
+    end
+    results
+  end
 end
+

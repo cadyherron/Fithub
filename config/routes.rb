@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :meals do
+    post 'add_food'
+    resources :foods do
+      collection do
+        get 'search'
+        post 'add_to_meal'
+      end
+    end
+  end
   root 'dashboard#index'
   resources :dashboard, only: [:index]
   # The priority is based upon order of creation: first created -> highest priority.
