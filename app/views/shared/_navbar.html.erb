@@ -18,6 +18,13 @@
         <li><a href="#">Meals</a></li>
         <li><a href="#">Workouts</a></li>
         <li><a href="#">Goals</a></li>
+
+        <% if signed_in_user? %>
+          <li><%= link_to "Logout", logout_path, :method => :delete %></li>
+        <% else %>
+          <li><%= link_to "Login", login_path %></li>
+        <% end %>
+
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
