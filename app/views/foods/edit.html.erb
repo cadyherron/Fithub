@@ -1,0 +1,30 @@
+<h2 class="page-header">
+  <%= @food.name %>
+</h2>
+
+<table class="table">
+  <thead>
+    <th>Name</th>
+    <th>Calories</th>
+    <th>Quantity</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <%= form_for [@meal, @food] do |food| %>
+      <tr>
+        <td>
+          <%= food.text_field :name %>
+        </td>
+        <td>
+          <%= food.text_field :calories %>
+        </td>
+        <td>
+          <%= food.text_field :quantity %>
+        </td>
+        <td>
+          <%= food.submit "Update", class: "btn btn-sm btn-primary" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
