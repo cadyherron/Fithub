@@ -4,6 +4,11 @@ class UsersController < ApplicationController
   skip_before_action :require_login,   :only => [ :new, :create ]
   before_action :require_current_user, :only => [ :edit, :update, :destroy ]
 
+  def index
+    # debug
+    @users = User.search(params[:query])
+  end
+
 
   def new
     @user = User.new

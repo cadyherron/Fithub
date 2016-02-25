@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  include Searchable
 
 
   before_create :generate_token

@@ -14,7 +14,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Home", dashboard_path(current_user) %></li>
         <li><%= link_to "Meals", root_path %></li>
         <li><%= link_to "Workouts", root_path %></li>
         <li><%= link_to "Goals", root_path %></li>
@@ -31,7 +31,7 @@
         <div class="form-group">
           <div class="search-bar">
           <!-- TODO: switch to users_path -->
-            <%= form_tag root_path, :method => 'get' do %>
+            <%= form_tag users_path, :method => 'get' do %>
               <%= text_field_tag :query, params[:query], placeholder: "Search for users", class: "form-control" %>
               <%= submit_tag "Go", class: "form-control" %>
             <% end %>
