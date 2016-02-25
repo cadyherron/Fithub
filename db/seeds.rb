@@ -28,3 +28,11 @@ end
 (MULTIPLIER*10).times do
   create_user
 end
+
+# create admin user that never changes 
+User.create(
+  first_name: "Admin", 
+  last_name: "User", 
+  email: "admin@admin.com", 
+  password_digest: "$2a$10$.MSTCUKj.7tpap8LswJXa.AeTlsa9Qmh0TWTcYJjqZd8bhMokgPbO"
+)
