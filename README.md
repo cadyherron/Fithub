@@ -1,4 +1,6 @@
-== Welcome to Fithub!
+== 
+Welcome to Fithub!
+==
 
 Live website hosted on Heroku:
 ...
