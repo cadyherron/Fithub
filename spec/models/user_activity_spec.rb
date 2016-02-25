@@ -59,25 +59,12 @@ describe UserActivity do
 
   end
 
-  # describe 'validates_body' do
+  describe 'creates_nultiple_activities_for_user'  do  
+    it "creates 5 same activity times for a user " do
+      new_activities = create_list(:user_activity, 5, user: user)
+      expect(user.new_activities.count).to eq(5)
+    end
 
-  #  it "does not allow a body length of less than 4" do
-  #       new_secret = build(:secret, :body => 'foo')
-  #       expect(new_secret).not_to be_valid
-  #     end
-
-  #   it "does not allow a body length of more than 140" do
-  #       new_secret = build(:secret, :body => 'f'*141)
-  #       expect(new_secret).not_to be_valid
-  #   end  
-  # end
-
-  # describe 'checks authors association' do
-  #   it "responds to the authors association" do
-  #     new_secret = build(:secret)
-  #     expect(new_secret).to respond_to(:author)
-  #   end
-  # end
-
+  end
 
 end
