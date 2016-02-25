@@ -35,4 +35,13 @@ class User < ActiveRecord::Base
     self.meals.inject(0) {|sum, meal| sum += meal.total_calories }
   end
 
+
+
+
+  def self.send_welcome_email(id)
+    user = User.find(id)
+    UserMailer.welcome(user).deliver
+  end
+
+
 end
