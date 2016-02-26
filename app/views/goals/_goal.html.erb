@@ -1,6 +1,17 @@
 <div class="list-group-item">
-  <h4><%= goal.goal_type %></h4>
-  <!-- <strong><%= distance_of_time_in_words(Time.now, goal.end_date)%></strong> Remaining -->
-  <h4><%= goal.end_date.strftime("%D") %></h4>
+  <% if goal.complete? %>
+    <h4 class='pull-right'><span class="glyphicon glyphicon-ok complete"></span></h4>
+  <% elsif goal.failed? %>
+    <h4 class='pull-right'><span class="glyphicon glyphicon-thumbs-down"></span></h4>
+  <% end %>
+  <% if goal.available? %>
+    <h4><%= goal.goal_type %> <small>Due <%= goal.end_date.strftime("%D") %></small></h4>
+    <strong><%= distance_of_time_in_words(Time.now, goal.end_date)%></strong> Remaining
+  <% else %>
+    <h4><%= goal.goal_type %> <small>Due <%= goal.end_date.strftime("%D") %></small></h4>
+    <strong>Goal Expired</strong>
+  <% end %>
+  <br>
+  <br>
   <%= goal_progress_bar(goal) %>
 </div>

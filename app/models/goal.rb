@@ -8,9 +8,16 @@ class Goal < ActiveRecord::Base
   scope :available, -> { where('end_date > ?', Date.today) }
   scope :unavailable, -> { where('end_date <= ?', Date.today) }
 
-
   def self.active
 
+  end
+
+  def available?
+    end_date > Date.today
+  end
+
+  def unavailable?
+    !available?
   end
 
   def parse_end_date
@@ -30,8 +37,16 @@ class Goal < ActiveRecord::Base
     (user.calories_burned(created_at, end_date.end_of_day) / target_amount.to_f) * 100
   end
 
-  def complete
+  def failed?
+    unavailable? && incomplete?
+  end
+
+  def complete?
     percent_complete >= 100
+  end
+
+  def incomplete?
+    !complete?
   end
 
 end
