@@ -1,5 +1,4 @@
 class UserActivity < ActiveRecord::Base
-  before_create :fill_in_nill
 
   include Analytics
 
@@ -40,15 +39,5 @@ class UserActivity < ActiveRecord::Base
     activities.inject(0) {|sum, activity| sum += activity.duration_minutes }
     
   end
-
-  def fill_in_nill
-    if self.calories.nil?
-       self.calories = 0
-    end
-    
-    if self.duration_minutes.nil?
-       self.duration_minutes = 0
-    end
-  end 
 
 end
