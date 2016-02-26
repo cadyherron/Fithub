@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :meals, dependent: :destroy
   has_many :goals, dependent: :destroy
   has_many :foods, through: :meals
-  has_many :user_activities
+  has_many :user_activities, -> { order('created_at DESC') }
 
 
   before_create :generate_token
