@@ -1,5 +1,5 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
+  <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -8,7 +8,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Fithub</a>
+      <a class="navbar-brand" href="#">
+        <%= image_tag 'FitHubLogo.png', class: 'logo' %>
+      </a>
+      <a class="navbar-brand" href="#">FitHub</a>
+
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,7 +21,7 @@
         <li><%= link_to "Home", dashboard_index_path(current_user) %></li>
         <li><%= link_to "Meals", root_path %></li>
         <li><%= link_to "Workouts", root_path %></li>
-        <li><%= link_to "Goals", root_path %></li>
+        <li><%= link_to "Goals", goals_path %></li>
 
         <% if signed_in_user? %>
           <li><%= link_to "Logout", logout_path, :method => :delete %></li>

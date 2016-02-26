@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   include Searchable
 
 
- 
+  has_many :goals, dependent: :destroy
   has_many :user_activities
 
 
@@ -31,5 +31,7 @@ class User < ActiveRecord::Base
     save!
   end
 
-
+  def calories_burned(start_date,end_date)
+    user_activities.where(created_at: start_date..end_date).sum(:calories)
+  end
 end

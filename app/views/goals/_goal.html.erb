@@ -1,0 +1,6 @@
+<div class="list-group-item">
+  <h4><%= goal.goal_type %></h4>
+  <!-- <strong><%= distance_of_time_in_words(Time.now, goal.end_date)%></strong> Remaining -->
+  <h4><%= goal.end_date.strftime("%D") %></h4>
+  <%= goal_progress_bar(goal) %>
+</div>
