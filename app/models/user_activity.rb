@@ -9,15 +9,17 @@ class UserActivity < ActiveRecord::Base
 
   validates :duration_minutes, inclusion: { in: 0..1000 }, :allow_nil => true
   validates :intensity, inclusion: { in: %w(Low Medium High),
-                        message: "%{value} is not a valid intensity"}
+                        message: "%{value} is not a High, Low or Medium intensity"}
+  validates :intensity, presence:true 
+  validates :activity_id, presence:true
   validates :calories, inclusion: { in: 0..2000 }, :allow_nil => true
 
   validates :user, presence: true
   validates :activity, presence: true
 
   def self.user_activities_for_today(user)
-    today = Time.new.strftime('%Y-%m-%d')
-    user.user_activities.where("created_at.strftime('%Y-%m-%d')" == today)
+    today = Time.new.beginning_of_day
+    user.user_activities.where("created_at >= ?", today)
   end 
 
   def self.user_calories_for_today(user,scope="today")
@@ -25,7 +27,7 @@ class UserActivity < ActiveRecord::Base
       activities = UserActivity.user_activities_for_today(user)
     else
       activities =user.user_activities
-    end  
+    end 
     activities.inject(0) {|sum, activity| sum += activity.calories }
 
   end
