@@ -22,7 +22,7 @@ feature 'User creates a meal' do
   end
 
 
-  scenario 'they search for meal items' do
+  xscenario 'they search for meal items' do
     VCR.use_cassette("apple") do
       visit new_meal_path
       find('#food_search').set('apple')

@@ -1,0 +1,10 @@
+<%= form_tag user_upload_avatar_path(@user), :multipart => true do %>
+  <p>
+    <%= text_field_tag :photo_url, "", class: "form-control", placeholder: "http://example.com/photo1.jpg" %>
+  </p>
+  <p>
+    <%= submit_tag "Use Web Photo", class: "btn btn-primary" %>
+  </p>
+  <%= file_field_tag :avatar %>
+  <%= submit_tag "upload photo" %>
+<% end %>

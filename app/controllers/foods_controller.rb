@@ -1,4 +1,5 @@
 class FoodsController < ApplicationController
+  load_and_authorize_resource
 
   def search
     @meal = Meal.find(params[:meal_id])
@@ -12,8 +13,8 @@ class FoodsController < ApplicationController
 
   def add_to_meal
     @meal = Meal.find(params[:meal_id])
-    food = Food.new(food_params)
-    if @meal.foods << food
+    food = @meal.foods.build(food_params)
+    if food.save
       redirect_to @meal
     else
       redirect_to :back

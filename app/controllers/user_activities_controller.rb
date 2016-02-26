@@ -1,14 +1,19 @@
 class UserActivitiesController < ApplicationController
+  load_and_authorize_resource
 
   before_action :require_login
 
   def index
     @user_activities = current_user.user_activities
+    @user_calories = UserActivity.user_calories_for_today(current_user,"to-date")
+    @user_minutes = UserActivity.user_minutes_for_today(current_user,"to-date")
   end
 
   def new
     @user_activity = UserActivity.new
-    @user_activities = UserActivity.user_activties_for_today(current_user)
+    @user_activities = UserActivity.user_activities_for_today(current_user)
+    @user_calories = UserActivity.user_calories_for_today(current_user)
+    @user_minutes = UserActivity.user_minutes_for_today(current_user)
   end
   
   def create
