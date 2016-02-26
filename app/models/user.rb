@@ -35,6 +35,10 @@ class User < ActiveRecord::Base
     user_activities.where(created_at: start_date..end_date).sum(:calories)
   end
 
+  def calories_consumed(start_date,end_date)
+    meals.where(created_at: start_date..end_date).joins(:foods).sum("CAST(calories AS FLOAT)")
+  end
+
   def total_calories
     self.meals.inject(0) {|sum, meal| sum += meal.total_calories }
   end

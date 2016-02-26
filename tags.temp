@@ -1,0 +1,257 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ActivitiesController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/activities_controller.rb	/^class ActivitiesController < ApplicationController$/;"	c
+ActivitiesHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/activities_helper.rb	/^module ActivitiesHelper$/;"	m
+Activity	/Users/kitlangton/Viking/Unit14/Fithub/app/models/activity.rb	/^class Activity < ActiveRecord::Base$/;"	c
+AddAttributesToFoods	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225190138_add_attributes_to_foods.rb	/^class AddAttributesToFoods < ActiveRecord::Migration$/;"	c
+Addcolumntomeals	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225220328_addcolumntomeals.rb	/^class Addcolumntomeals < ActiveRecord::Migration$/;"	c
+Analytics	/Users/kitlangton/Viking/Unit14/Fithub/app/models/concerns/analytics.rb	/^module Analytics$/;"	m
+Application	/Users/kitlangton/Viking/Unit14/Fithub/config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Fithub
+ApplicationController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+ApplicationMailer	/Users/kitlangton/Viking/Unit14/Fithub/app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
+ClassMethods	/Users/kitlangton/Viking/Unit14/Fithub/app/models/concerns/searchable.rb	/^  module ClassMethods$/;"	m	class:Searchable
+CreateActivities	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225172715_create_activities.rb	/^class CreateActivities < ActiveRecord::Migration$/;"	c
+CreateDelayedJobs	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225220438_create_delayed_jobs.rb	/^class CreateDelayedJobs < ActiveRecord::Migration$/;"	c
+CreateFoods	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225173604_create_foods.rb	/^class CreateFoods < ActiveRecord::Migration$/;"	c
+CreateGoals	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225222353_create_goals.rb	/^class CreateGoals < ActiveRecord::Migration$/;"	c
+CreateMeals	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225172946_create_meals.rb	/^class CreateMeals < ActiveRecord::Migration$/;"	c
+CreateUserActivities	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225172722_create_user_activities.rb	/^class CreateUserActivities < ActiveRecord::Migration$/;"	c
+CreateUsers	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225164947_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
+Dashboard	/Users/kitlangton/Viking/Unit14/Fithub/app/models/dashboard.rb	/^class Dashboard < ActiveRecord::Base$/;"	c
+DashboardController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/dashboard_controller.rb	/^class DashboardController < ApplicationController$/;"	c
+DashboardHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/dashboard_helper.rb	/^module DashboardHelper$/;"	m
+DropAndAddColumnToUserActivities	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225181213_drop_and_add_column_to_user_activities.rb	/^class DropAndAddColumnToUserActivities < ActiveRecord::Migration$/;"	c
+Fithub	/Users/kitlangton/Viking/Unit14/Fithub/config/application.rb	/^module Fithub$/;"	m
+Food	/Users/kitlangton/Viking/Unit14/Fithub/app/models/food.rb	/^class Food < ActiveRecord::Base$/;"	c
+FoodsController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^class FoodsController < ApplicationController$/;"	c
+FoodsHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/foods_helper.rb	/^module FoodsHelper$/;"	m
+Goal	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^class Goal < ActiveRecord::Base$/;"	c
+GoalsController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/goals_controller.rb	/^class GoalsController < ApplicationController$/;"	c
+Meal	/Users/kitlangton/Viking/Unit14/Fithub/app/models/meal.rb	/^class Meal < ActiveRecord::Base$/;"	c
+MealsController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^class MealsController < ApplicationController$/;"	c
+MealsHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/meals_helper.rb	/^module MealsHelper$/;"	m
+Nutritionix	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix.rb	/^class Nutritionix$/;"	c
+NutritionixResult	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix_result.rb	/^class NutritionixResult$/;"	c
+Searchable	/Users/kitlangton/Viking/Unit14/Fithub/app/models/concerns/searchable.rb	/^module Searchable$/;"	m
+SessionsController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
+SessionsHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/sessions_helper.rb	/^module SessionsHelper$/;"	m
+User	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UserActivitiesController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/user_activities_controller.rb	/^class UserActivitiesController < ApplicationController$/;"	c
+UserActivitiesHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/user_activities_helper.rb	/^module UserActivitiesHelper$/;"	m
+UserActivity	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user_activity.rb	/^class UserActivity < ActiveRecord::Base$/;"	c
+UserMailer	/Users/kitlangton/Viking/Unit14/Fithub/app/mailers/user_mailer.rb	/^class UserMailer < ApplicationMailer$/;"	c
+UserMailerPreview	/Users/kitlangton/Viking/Unit14/Fithub/spec/mailers/previews/user_mailer_preview.rb	/^class UserMailerPreview < ActionMailer::Preview$/;"	c
+UsersController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+UsersHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
+active	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def self.active$/;"	F	class:Goal
+add_to_meal	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^  def add_to_meal$/;"	f	class:FoodsController
+available?	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def available?$/;"	f	class:Goal
+calories_burned	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def calories_burned(start_date,end_date)$/;"	f	class:User
+calories_consumed	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def calories_consumed(start_date,end_date)$/;"	f	class:User
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225164947_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225172715_create_activities.rb	/^  def change$/;"	f	class:CreateActivities
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225172722_create_user_activities.rb	/^  def change$/;"	f	class:CreateUserActivities
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225172946_create_meals.rb	/^  def change$/;"	f	class:CreateMeals
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225173604_create_foods.rb	/^  def change$/;"	f	class:CreateFoods
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225181213_drop_and_add_column_to_user_activities.rb	/^  def change$/;"	f	class:DropAndAddColumnToUserActivities
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225190138_add_attributes_to_foods.rb	/^  def change$/;"	f	class:AddAttributesToFoods
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225220328_addcolumntomeals.rb	/^  def change$/;"	f	class:Addcolumntomeals
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225222353_create_goals.rb	/^  def change$/;"	f	class:CreateGoals
+complete?	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def complete?$/;"	f	class:Goal
+create	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/goals_controller.rb	/^  def create$/;"	f	class:GoalsController
+create	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def create$/;"	f	class:MealsController
+create	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
+create	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/user_activities_controller.rb	/^  def create$/;"	f	class:UserActivitiesController
+create	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
+create_user	/Users/kitlangton/Viking/Unit14/Fithub/db/seeds.rb	/^def create_user$/;"	f
+current_user	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def current_user$/;"	f	class:ApplicationController
+current_user_workouts	/Users/kitlangton/Viking/Unit14/Fithub/app/models/concerns/analytics.rb	/^  def current_user_workouts$/;"	f	class:Analytics
+destroy	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^  def destroy$/;"	f	class:FoodsController
+destroy	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def destroy$/;"	f	class:MealsController
+destroy	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
+destroy	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/user_activities_controller.rb	/^  def destroy$/;"	f	class:UserActivitiesController
+destroy	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def destroy$/;"	f	class:UsersController
+down	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225220438_create_delayed_jobs.rb	/^  def self.down$/;"	F	class:CreateDelayedJobs
+edit	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^  def edit$/;"	f	class:FoodsController
+edit	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersController
+end_date_is_in_the_future	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def end_date_is_in_the_future$/;"	f	class:Goal
+failed?	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def failed?$/;"	f	class:Goal
+food_params	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^  def food_params$/;"	f	class:FoodsController
+from_json	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix_result.rb	/^  def self.from_json(json)$/;"	F	class:NutritionixResult
+full_name	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def full_name$/;"	f	class:User
+generate_token	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def generate_token$/;"	f	class:User
+goal_amount	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def goal_amount$/;"	f	class:Goal
+goal_params	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/goals_controller.rb	/^  def goal_params$/;"	f	class:GoalsController
+incomplete?	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def incomplete?$/;"	f	class:Goal
+index	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/dashboard_controller.rb	/^  def index$/;"	f	class:DashboardController
+index	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/goals_controller.rb	/^  def index$/;"	f	class:GoalsController
+index	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def index$/;"	f	class:MealsController
+index	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/user_activities_controller.rb	/^  def index$/;"	f	class:UserActivitiesController
+index	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
+initialize	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix.rb	/^  def initialize$/;"	f	class:Nutritionix
+initialize	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix_result.rb	/^  def initialize(name: name, calories: calories)$/;"	f	class:NutritionixResult
+meal_params	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def meal_params$/;"	f	class:MealsController
+new	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/goals_controller.rb	/^  def new$/;"	f	class:GoalsController
+new	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def new$/;"	f	class:MealsController
+new	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
+new	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/user_activities_controller.rb	/^  def new$/;"	f	class:UserActivitiesController
+new	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
+parse_end_date	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def parse_end_date$/;"	f	class:Goal
+percent_complete	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def percent_complete$/;"	f	class:Goal
+permanent_sign_in	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def permanent_sign_in(user)$/;"	f	class:ApplicationController
+regenerate_auth_token	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def regenerate_auth_token$/;"	f	class:User
+require_current_user	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def require_current_user$/;"	f	class:ApplicationController
+require_login	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def require_login$/;"	f	class:ApplicationController
+search	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^  def search$/;"	f	class:FoodsController
+search	/Users/kitlangton/Viking/Unit14/Fithub/app/models/concerns/searchable.rb	/^    def search(query)$/;"	f	class:Searchable.ClassMethods
+search	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix.rb	/^  def search(food)$/;"	f	class:Nutritionix
+send_welcome_email	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def self.send_welcome_email(id)$/;"	F	class:User
+show	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def show$/;"	f	class:MealsController
+show	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
+sign_in	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def sign_in(user)$/;"	f	class:ApplicationController
+sign_out	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def sign_out$/;"	f	class:ApplicationController
+signed_in_user?	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def signed_in_user?$/;"	f	class:ApplicationController
+to_food	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix.rb	/^  def to_food$/;"	f	class:Nutritionix
+total_calories	/Users/kitlangton/Viking/Unit14/Fithub/app/models/meal.rb	/^  def total_calories$/;"	f	class:Meal
+total_calories	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def total_calories$/;"	f	class:User
+unavailable?	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def unavailable?$/;"	f	class:Goal
+up	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225220438_create_delayed_jobs.rb	/^  def self.up$/;"	F	class:CreateDelayedJobs
+update	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^  def update$/;"	f	class:FoodsController
+update	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def update$/;"	f	class:MealsController
+update	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
+user_activity_params	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/user_activities_controller.rb	/^  def user_activity_params$/;"	f	class:UserActivitiesController
+user_activties_for_today	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user_activity.rb	/^  def self.user_activties_for_today(user)$/;"	F	class:UserActivity
+user_params	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def user_params$/;"	f	class:UsersController
+welcome	/Users/kitlangton/Viking/Unit14/Fithub/app/mailers/user_mailer.rb	/^  def welcome(user)$/;"	f	class:UserMailer
+ActivitiesController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/activities_controller.rb	/^class ActivitiesController < ApplicationController$/;"	c
+ApplicationController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+sign_in	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def sign_in(user)$/;"	f	class:ApplicationController
+permanent_sign_in	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def permanent_sign_in(user)$/;"	f	class:ApplicationController
+sign_out	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def sign_out$/;"	f	class:ApplicationController
+current_user	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def current_user$/;"	f	class:ApplicationController
+signed_in_user?	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def signed_in_user?$/;"	f	class:ApplicationController
+require_login	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def require_login$/;"	f	class:ApplicationController
+require_current_user	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/application_controller.rb	/^  def require_current_user$/;"	f	class:ApplicationController
+DashboardController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/dashboard_controller.rb	/^class DashboardController < ApplicationController$/;"	c
+index	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/dashboard_controller.rb	/^  def index$/;"	f	class:DashboardController
+FoodsController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^class FoodsController < ApplicationController$/;"	c
+search	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^  def search$/;"	f	class:FoodsController
+add_to_meal	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^  def add_to_meal$/;"	f	class:FoodsController
+edit	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^  def edit$/;"	f	class:FoodsController
+update	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^  def update$/;"	f	class:FoodsController
+destroy	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^  def destroy$/;"	f	class:FoodsController
+food_params	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/foods_controller.rb	/^  def food_params$/;"	f	class:FoodsController
+GoalsController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/goals_controller.rb	/^class GoalsController < ApplicationController$/;"	c
+index	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/goals_controller.rb	/^  def index$/;"	f	class:GoalsController
+new	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/goals_controller.rb	/^  def new$/;"	f	class:GoalsController
+create	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/goals_controller.rb	/^  def create$/;"	f	class:GoalsController
+goal_params	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/goals_controller.rb	/^  def goal_params$/;"	f	class:GoalsController
+MealsController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^class MealsController < ApplicationController$/;"	c
+index	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def index$/;"	f	class:MealsController
+new	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def new$/;"	f	class:MealsController
+create	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def create$/;"	f	class:MealsController
+show	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def show$/;"	f	class:MealsController
+update	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def update$/;"	f	class:MealsController
+destroy	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def destroy$/;"	f	class:MealsController
+meal_params	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/meals_controller.rb	/^  def meal_params$/;"	f	class:MealsController
+SessionsController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
+new	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
+create	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
+destroy	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
+UserActivitiesController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/user_activities_controller.rb	/^class UserActivitiesController < ApplicationController$/;"	c
+index	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/user_activities_controller.rb	/^  def index$/;"	f	class:UserActivitiesController
+new	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/user_activities_controller.rb	/^  def new$/;"	f	class:UserActivitiesController
+create	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/user_activities_controller.rb	/^  def create$/;"	f	class:UserActivitiesController
+destroy	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/user_activities_controller.rb	/^  def destroy$/;"	f	class:UserActivitiesController
+user_activity_params	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/user_activities_controller.rb	/^  def user_activity_params$/;"	f	class:UserActivitiesController
+UsersController	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+index	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
+new	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
+create	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
+show	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
+edit	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersController
+update	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
+destroy	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def destroy$/;"	f	class:UsersController
+user_params	/Users/kitlangton/Viking/Unit14/Fithub/app/controllers/users_controller.rb	/^  def user_params$/;"	f	class:UsersController
+ActivitiesHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/activities_helper.rb	/^module ActivitiesHelper$/;"	m
+ApplicationHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+DashboardHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/dashboard_helper.rb	/^module DashboardHelper$/;"	m
+FoodsHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/foods_helper.rb	/^module FoodsHelper$/;"	m
+GoalsHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/goals_helper.rb	/^module GoalsHelper$/;"	m
+goal_progress_bar	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/goals_helper.rb	/^  def goal_progress_bar(goal)$/;"	f	class:GoalsHelper
+icon_for_goal_type	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/goals_helper.rb	/^  def icon_for_goal_type(goal_type)$/;"	f	class:GoalsHelper
+MealsHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/meals_helper.rb	/^module MealsHelper$/;"	m
+SessionsHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/sessions_helper.rb	/^module SessionsHelper$/;"	m
+UserActivitiesHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/user_activities_helper.rb	/^module UserActivitiesHelper$/;"	m
+UsersHelper	/Users/kitlangton/Viking/Unit14/Fithub/app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
+ApplicationMailer	/Users/kitlangton/Viking/Unit14/Fithub/app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
+UserMailer	/Users/kitlangton/Viking/Unit14/Fithub/app/mailers/user_mailer.rb	/^class UserMailer < ApplicationMailer$/;"	c
+welcome	/Users/kitlangton/Viking/Unit14/Fithub/app/mailers/user_mailer.rb	/^  def welcome(user)$/;"	f	class:UserMailer
+Activity	/Users/kitlangton/Viking/Unit14/Fithub/app/models/activity.rb	/^class Activity < ActiveRecord::Base$/;"	c
+Analytics	/Users/kitlangton/Viking/Unit14/Fithub/app/models/concerns/analytics.rb	/^module Analytics$/;"	m
+current_user_workouts	/Users/kitlangton/Viking/Unit14/Fithub/app/models/concerns/analytics.rb	/^  def current_user_workouts$/;"	f	class:Analytics
+Searchable	/Users/kitlangton/Viking/Unit14/Fithub/app/models/concerns/searchable.rb	/^module Searchable$/;"	m
+ClassMethods	/Users/kitlangton/Viking/Unit14/Fithub/app/models/concerns/searchable.rb	/^  module ClassMethods$/;"	m	class:Searchable
+search	/Users/kitlangton/Viking/Unit14/Fithub/app/models/concerns/searchable.rb	/^    def search(query)$/;"	f	class:Searchable.ClassMethods
+Dashboard	/Users/kitlangton/Viking/Unit14/Fithub/app/models/dashboard.rb	/^class Dashboard < ActiveRecord::Base$/;"	c
+Food	/Users/kitlangton/Viking/Unit14/Fithub/app/models/food.rb	/^class Food < ActiveRecord::Base$/;"	c
+Goal	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^class Goal < ActiveRecord::Base$/;"	c
+active	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def self.active$/;"	F	class:Goal
+available?	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def available?$/;"	f	class:Goal
+unavailable?	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def unavailable?$/;"	f	class:Goal
+parse_end_date	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def parse_end_date$/;"	f	class:Goal
+end_date_is_in_the_future	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def end_date_is_in_the_future$/;"	f	class:Goal
+goal_amount	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def goal_amount$/;"	f	class:Goal
+percent_complete	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def percent_complete$/;"	f	class:Goal
+failed?	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def failed?$/;"	f	class:Goal
+complete?	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def complete?$/;"	f	class:Goal
+incomplete?	/Users/kitlangton/Viking/Unit14/Fithub/app/models/goal.rb	/^  def incomplete?$/;"	f	class:Goal
+Meal	/Users/kitlangton/Viking/Unit14/Fithub/app/models/meal.rb	/^class Meal < ActiveRecord::Base$/;"	c
+total_calories	/Users/kitlangton/Viking/Unit14/Fithub/app/models/meal.rb	/^  def total_calories$/;"	f	class:Meal
+Nutritionix	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix.rb	/^class Nutritionix$/;"	c
+initialize	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix.rb	/^  def initialize$/;"	f	class:Nutritionix
+search	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix.rb	/^  def search(food)$/;"	f	class:Nutritionix
+to_food	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix.rb	/^  def to_food$/;"	f	class:Nutritionix
+NutritionixResult	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix_result.rb	/^class NutritionixResult$/;"	c
+initialize	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix_result.rb	/^  def initialize(name: name, calories: calories)$/;"	f	class:NutritionixResult
+from_json	/Users/kitlangton/Viking/Unit14/Fithub/app/models/nutritionix_result.rb	/^  def self.from_json(json)$/;"	F	class:NutritionixResult
+User	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+full_name	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def full_name$/;"	f	class:User
+generate_token	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def generate_token$/;"	f	class:User
+regenerate_auth_token	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def regenerate_auth_token$/;"	f	class:User
+calories_burned	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def calories_burned(start_date,end_date)$/;"	f	class:User
+calories_consumed	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def calories_consumed(start_date,end_date)$/;"	f	class:User
+total_calories	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def total_calories$/;"	f	class:User
+send_welcome_email	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user.rb	/^  def self.send_welcome_email(id)$/;"	F	class:User
+UserActivity	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user_activity.rb	/^class UserActivity < ActiveRecord::Base$/;"	c
+user_activties_for_today	/Users/kitlangton/Viking/Unit14/Fithub/app/models/user_activity.rb	/^  def self.user_activties_for_today(user)$/;"	F	class:UserActivity
+Fithub	/Users/kitlangton/Viking/Unit14/Fithub/config/application.rb	/^module Fithub$/;"	m
+Application	/Users/kitlangton/Viking/Unit14/Fithub/config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Fithub
+CreateUsers	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225164947_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225164947_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+CreateActivities	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225172715_create_activities.rb	/^class CreateActivities < ActiveRecord::Migration$/;"	c
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225172715_create_activities.rb	/^  def change$/;"	f	class:CreateActivities
+CreateUserActivities	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225172722_create_user_activities.rb	/^class CreateUserActivities < ActiveRecord::Migration$/;"	c
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225172722_create_user_activities.rb	/^  def change$/;"	f	class:CreateUserActivities
+CreateMeals	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225172946_create_meals.rb	/^class CreateMeals < ActiveRecord::Migration$/;"	c
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225172946_create_meals.rb	/^  def change$/;"	f	class:CreateMeals
+CreateFoods	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225173604_create_foods.rb	/^class CreateFoods < ActiveRecord::Migration$/;"	c
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225173604_create_foods.rb	/^  def change$/;"	f	class:CreateFoods
+DropAndAddColumnToUserActivities	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225181213_drop_and_add_column_to_user_activities.rb	/^class DropAndAddColumnToUserActivities < ActiveRecord::Migration$/;"	c
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225181213_drop_and_add_column_to_user_activities.rb	/^  def change$/;"	f	class:DropAndAddColumnToUserActivities
+AddAttributesToFoods	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225190138_add_attributes_to_foods.rb	/^class AddAttributesToFoods < ActiveRecord::Migration$/;"	c
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225190138_add_attributes_to_foods.rb	/^  def change$/;"	f	class:AddAttributesToFoods
+Addcolumntomeals	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225220328_addcolumntomeals.rb	/^class Addcolumntomeals < ActiveRecord::Migration$/;"	c
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225220328_addcolumntomeals.rb	/^  def change$/;"	f	class:Addcolumntomeals
+CreateDelayedJobs	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225220438_create_delayed_jobs.rb	/^class CreateDelayedJobs < ActiveRecord::Migration$/;"	c
+up	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225220438_create_delayed_jobs.rb	/^  def self.up$/;"	F	class:CreateDelayedJobs
+down	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225220438_create_delayed_jobs.rb	/^  def self.down$/;"	F	class:CreateDelayedJobs
+CreateGoals	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225222353_create_goals.rb	/^class CreateGoals < ActiveRecord::Migration$/;"	c
+change	/Users/kitlangton/Viking/Unit14/Fithub/db/migrate/20160225222353_create_goals.rb	/^  def change$/;"	f	class:CreateGoals
+create_user	/Users/kitlangton/Viking/Unit14/Fithub/db/seeds.rb	/^def create_user$/;"	f
+UserMailerPreview	/Users/kitlangton/Viking/Unit14/Fithub/spec/mailers/previews/user_mailer_preview.rb	/^class UserMailerPreview < ActionMailer::Preview$/;"	c

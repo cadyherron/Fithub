@@ -36,6 +36,23 @@ input.btn.btn-default.btn-xl.btn-block {
   top: -7px;
 }
 
+.complete {
+  animation: pulse-green 3s infinite;
+  color: green;
+}
+
+@keyframes pulse-green {
+  50% {
+    color: lightgreen;
+  }
+}
+
+@keyframes pulse-green {
+  50% {
+    color: lightgreen;
+  }
+}
+
 
 
 @import "bootstrap-sprockets";
