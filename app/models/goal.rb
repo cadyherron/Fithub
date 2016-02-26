@@ -1,15 +1,14 @@
 class Goal < ActiveRecord::Base
   enum goal_types: ["Calories Burned", "Calories Consumed"]
   belongs_to :user
-  validates :goal_type, inclusion: { in: Goal.goal_types }
+  validates :goal_type, inclusion: { in: Goal.goal_types , message: 'Nice try, YOU SNEAKY SNEAK!'}
   validates :goal_type, :end_date, :user, :target_amount, presence: true
+  validates :target_amount, numericality: { greater_than: 99 , message: 'must be greater than 99, PAIN IS WEAKNESS LEAVING THE BODY' }
   validate :end_date_is_in_the_future
-  before_validation :parse_end_date
-  scope :available, -> { where('end_date > ?', Date.today) }
-  scope :unavailable, -> { where('end_date <= ?', Date.today) }
+  scope :available, -> { where('end_date >= ?', Date.today) }
+  scope :unavailable, -> { where('end_date < ?', Date.today) }
 
   def self.active
-
   end
 
   def available?
@@ -20,15 +19,8 @@ class Goal < ActiveRecord::Base
     !available?
   end
 
-  def parse_end_date
-    unless end_date.is_a? DateTime
-      self.end_date = Chronic.parse(end_date_before_type_cast).to_date
-    end
-  end
-
   def end_date_is_in_the_future
-    unless end_date > Date.today
-      self.end_date = end_date.to_date
+    unless end_date && end_date > Date.today
       errors.add(:end_date, "must be in the future")
     end
   end
@@ -43,7 +35,7 @@ class Goal < ActiveRecord::Base
   end
 
   def percent_complete
-     goal_amount / target_amount.to_f * 100
+    goal_amount / target_amount.to_f * 100
   end
 
   def failed?

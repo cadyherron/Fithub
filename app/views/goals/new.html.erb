@@ -1,22 +1,21 @@
 <h1>New Goal</h1>
 
-<%= form_for @goal do |f| %>
-  <% @goal.errors.each do |error,message| %>
-    <%= error %>
-    <%= message %>
-  <% end %>
-  <div class="form-group">
-    <%= f.label :goal_type %>
-    <%= f.select :goal_type, Goal.goal_types.keys.to_a , {}, class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :target_amount%>
-    <%= f.number_field :target_amount, class: 'form-control'%>
-  </div>
-  <div class="form-group">
-    <%= f.label :end_date, "Target date"%>
-    <%= f.text_field :end_date, placeholder: '1 week from today...', class: 'form-control'%>
-  </div>
-  <%= f.submit %>
-<% end %>
+<div class="panel panel-default">
 
+  <div class="panel-body">
+    <%= simple_form_for @goal do |f| %>
+      <div class="form-group">
+        <%= f.input :goal_type, collection: Goal.goal_types.keys.to_a, include_blank: false %>
+      </div>
+      <div class="form-group">
+        <%= f.input :target_amount %>
+      </div>
+      <div class="form-group">
+        <%= f.label :end_date %>
+        <%= f.hidden_field :end_date %>
+        <div class="datepicker"></div>
+      </div>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>

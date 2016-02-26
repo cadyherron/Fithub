@@ -19,6 +19,14 @@ class GoalsController < ApplicationController
     end
   end
 
+  def destroy
+    @goal = Goal.find(params[:id])
+    if @goal.destroy
+      flash[:notice] = "Goal destroyed!"
+    end
+    redirect_to :back
+  end
+
   private
 
   def goal_params
