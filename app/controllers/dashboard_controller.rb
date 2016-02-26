@@ -5,6 +5,8 @@ class DashboardController < ApplicationController
 
 
   def index
+    average = User.avg_calories_consumed_per_day(current_user)[0]
+    @average_per_day = average.avg.to_i unless average.nil? 
   end
 
 
