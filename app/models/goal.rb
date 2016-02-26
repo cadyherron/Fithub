@@ -33,8 +33,17 @@ class Goal < ActiveRecord::Base
     end
   end
 
+  def goal_amount
+    case goal_type
+    when "Calories Burned"
+      user.calories_burned(created_at, end_date.end_of_day)
+    when "Calories Consumed"
+      user.calories_consumed(created_at, end_date.end_of_day)
+    end
+  end
+
   def percent_complete
-    (user.calories_burned(created_at, end_date.end_of_day) / target_amount.to_f) * 100
+     goal_amount / target_amount.to_f * 100
   end
 
   def failed?

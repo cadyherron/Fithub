@@ -4,11 +4,10 @@
   <% elsif goal.failed? %>
     <h4 class='pull-right'><span class="glyphicon glyphicon-thumbs-down"></span></h4>
   <% end %>
+  <h4><%= icon_for_goal_type(goal.goal_type)%> <%= goal.goal_type %> <small>Due <%= goal.end_date.strftime("%D") %></small></h4>
   <% if goal.available? %>
-    <h4><%= goal.goal_type %> <small>Due <%= goal.end_date.strftime("%D") %></small></h4>
     <strong><%= distance_of_time_in_words(Time.now, goal.end_date)%></strong> Remaining
   <% else %>
-    <h4><%= goal.goal_type %> <small>Due <%= goal.end_date.strftime("%D") %></small></h4>
     <strong>Goal Expired</strong>
   <% end %>
   <br>
