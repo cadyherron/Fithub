@@ -1,4 +1,4 @@
-<%= image_tag @user.avatar.url(:thumb) %>
+<%= image_tag @user.avatar.url(:thumb) if @user.avatar %>
 <p>
   <strong>Username:</strong>
   <%= @user.full_name %>
