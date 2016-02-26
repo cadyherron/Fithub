@@ -55,7 +55,9 @@ class User < ActiveRecord::Base
   end
 
   def photo_url(url)
-    self.avatar = open(url)
+    if url =~ URI::regexp
+      self.avatar = open(url)
+    end
   end
 
 end
