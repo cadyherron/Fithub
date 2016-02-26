@@ -12,9 +12,10 @@ http://stormy-reef-98752.herokuapp.com/
 
 
 Feature highlights:
-* secure login
 * can track meals & workouts
+* can create goals for calories consumed or burned
 * calorie values for over 500,000 food items
+* secure login
 
 
 Fancy Rails things:
@@ -23,7 +24,8 @@ Fancy Rails things:
 * HTTParty hits Nutritionix API
 * test coverage with FactoryGirl + Capybara
 * VCR gem for API call playback
-
+* photo uploads to S3
+* simple form
 
 
 To run locally:

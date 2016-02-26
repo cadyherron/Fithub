@@ -3,7 +3,7 @@
     <h3 class="panel-title"><%= link_to user.full_name, user_path(user) %></h3>
   </div>
   <div class="panel-body">
-    User photo here
+    <%= image_tag user.avatar.url(:thumb) if user.avatar %>
   </div>
 </div>
 

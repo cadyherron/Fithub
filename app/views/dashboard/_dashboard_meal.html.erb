@@ -1,0 +1,13 @@
+<div class="list-group-item">
+  <h4 class='pull-right'><small>Calories</small> <span class="label label-default"><%= meal.total_calories %></span></h4>
+  <h4><%= link_to meal.meal_type, meal %></h4>
+  <h4>Eaten <%= time_ago_in_words(meal.created_at)%> ago</h4>
+  Consisting of...
+  <% if meal.foods.any? %>
+    <p>
+    <%= meal.foods.sample(5).map { |food| link_to food.name, edit_meal_food_path(meal, food) }.join(", ").html_safe%>
+    </p>
+  <% else %>
+    Oxygen...
+  <% end %>
+</div>
