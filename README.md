@@ -1,6 +1,8 @@
-== 
+==
 Welcome to Fithub!
 ==
+
+<a href="https://codeclimate.com/github/cadyherron/Fithub"><img src="https://codeclimate.com/github/cadyherron/Fithub/badges/gpa.svg" /></a>
 
 Live website hosted on Heroku:
 
