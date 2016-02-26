@@ -27,7 +27,6 @@ class UsersController < ApplicationController
     end
   end
 
-
   def show
     @user = User.find( params[:id] )
   end
@@ -37,8 +36,22 @@ class UsersController < ApplicationController
     @user = User.find( params[:id] )
   end
 
+  def upload_avatar
+    unless params[:photo_url].empty?
+      current_user.photo_url(params[:photo_url])
+    else
+      current_user.avatar = params[:avatar]
+    end
+
+    if current_user.save
+      redirect_to current_user
+    else
+
+    end
+  end
 
   def update
+
     if current_user.update(user_params) 
       flash[:success] = "Successfully updated your profile"
       redirect_to current_user
@@ -61,8 +74,13 @@ class UsersController < ApplicationController
 
 
   private
+
+  def photo_params
+    params.require(:user).permit(:avatar)
+  end
+
   def user_params
-    params.require(:user).permit( :first_name, :last_name, :email, :password, :password_confirmation )
+    params.require(:user).permit( :first_name, :last_name, :email, :password, :password_confirmation, :avatar, :photo_url)
   end
 
 

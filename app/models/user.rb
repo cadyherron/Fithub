@@ -16,8 +16,7 @@ class User < ActiveRecord::Base
   validates :password,
             :length => {:in => 6..40 },
             :allow_nil => true
-
-
+            
   def full_name
     first_name + " " + last_name
   end
@@ -38,13 +37,13 @@ class User < ActiveRecord::Base
     self.meals.inject(0) {|sum, meal| sum += meal.total_calories }
   end
 
-
-
-
   def self.send_welcome_email(id)
     user = User.find(id)
     UserMailer.welcome(user).deliver
   end
 
+  def photo_url(url)
+    self.avatar = open(url)
+  end
 
 end
