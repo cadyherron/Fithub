@@ -29,6 +29,12 @@ Activity.create(name: "treadmill", calories_per_hour: 750)
 Activity.create(name: "hiking", calories_per_hour: 650)
 Activity.create(name: "jumping rope", calories_per_hour: 960)
 Activity.create(name: "swimming", calories_per_hour: 950)
+Activity.create(name: "spinning", calories_per_hour: 950)
+Activity.create(name: "lifting weights", calories_per_hour: 950)
+Activity.create(name: "kickboxing", calories_per_hour: 950)
+Activity.create(name: "bikram yoga", calories_per_hour: 950)
+Activity.create(name: "squash", calories_per_hour: 950)
+Activity.create(name: "steam room", calories_per_hour: 400)
 
 
 
