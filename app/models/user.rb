@@ -4,11 +4,7 @@ class User < ActiveRecord::Base
 
   has_many :meals, dependent: :destroy
   has_many :goals, dependent: :destroy
-
-
   has_many :foods, through: :meals
-
-
   has_many :user_activities
 
 
@@ -49,12 +45,5 @@ class User < ActiveRecord::Base
     user = User.find(id)
     UserMailer.welcome(user).deliver
   end
-<<<<<<< HEAD
 
-
-
-
-
-=======
->>>>>>> master
 end
