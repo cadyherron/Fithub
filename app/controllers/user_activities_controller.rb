@@ -1,27 +1,23 @@
 class UserActivitiesController < ApplicationController
 
+  before_action :require_login
+
   def index
-    #@user_id = params[:user_id]
-    @user_id = 1
-    @user_activities = UserActivity.where("user_id = ?", @user_id)
-    #should be  @user_activities = @user.user_activities
+    @user_activities = current_user.user_activities
   end
 
   def new
-    @user_id = params[:user_id]
     @user_activity = UserActivity.new
-    @user_activities = UserActivity.where("user_id = ?", @user_id)
-    #@user_activities = UserActivity.where(.strftime("%Y-%m-%d")
+    @user_activities = UserActivity.user_activties_for_today(current_user)
   end
   
   def create
-    user_id = params[:user_id]
     @user_activity = UserActivity.new(user_activity_params)
-    @user_activity.user_id = user_id
+    @user_activity.user_id = current_user.id
 
     if @user_activity.save
       flash[:success] = "Activity Logged!"
-      redirect_to new_user_activity_path(user_id: user_id)
+      redirect_to :back
     else    
       flash[:error] = "Activity could not be logged!"
       render :new
@@ -43,7 +39,6 @@ class UserActivitiesController < ApplicationController
     end
 
   end
-
 
   private
   def user_activity_params

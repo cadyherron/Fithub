@@ -52,3 +52,6 @@ User.create(
   password_digest: "$2a$10$.MSTCUKj.7tpap8LswJXa.AeTlsa9Qmh0TWTcYJjqZd8bhMokgPbO"
 )
 
+
+
+puts "DONE!"

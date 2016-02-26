@@ -5,14 +5,14 @@ http_interactions:
     uri: https://api.nutritionix.com/v1_1/search/
     body:
       encoding: UTF-8
-      string: '{"appId":null,"appKey":null,"query":"Apple","fields":["item_name","nf_calories"]}'
+      string: '{"appId":"070b4b7a","appKey":"943a89351d3489e6cf4937d51f82c789","query":"apple","fields":["item_name","nf_calories"]}'
     headers:
       Content-Type:
       - application/json
   response:
     status:
-      code: 401
-      message: Unauthorized
+      code: 200
+      message: OK
     headers:
       Access-Control-Allow-Headers:
       - Content-Type, X-Requested-With, X-APP-ID, X-APP-KEY
@@ -23,25 +23,36 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 25 Feb 2016 18:19:12 GMT
+      - Thu, 25 Feb 2016 22:47:43 GMT
+      Etag:
+      - '"-1154128666"'
       Server:
       - nginx/1.6.2 + Phusion Passenger
       Set-Cookie:
-      - session=1ubWwHgb2D3xb_8ObxoSvQ.3GgwPQde17pKxfb9EMTOCX2AsGFkMQaQepEBM44Q4qA.1456424352705.86400000.T7AHEmzrSs_C9GsTjmS4yAopP0QnCNkkSweN6ZuJxag;
-        path=/; expires=Sat, 26 Mar 2016 18:19:12 GMT
+      - session=OE_TIFVWsfq9fzmMKIRK8A.e08p9ZRyZ0la799PUmGC--ooJv7j0qx2CuNvici77wE.1456440463365.86400000.GpNVkP_IMYxcnltlOSotg19Ybn-LFtwsZLcVoO1nQVw;
+        path=/; expires=Sat, 26 Mar 2016 22:47:43 GMT
       Status:
-      - 401 Unauthorized
+      - 200 OK
       X-Powered-By:
       - Express
       - Phusion Passenger
       Content-Length:
-      - '122'
+      - '2005'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"appId":{"param":"appId","msg":"must provide valid appId"},"appKey":{"param":"appKey","msg":"must
-        provide valid appKey"}}'
+      string: '{"total":11979,"max_score":11.673948,"hits":[{"_index":"f762ef22-e660-434f-9071-a10ea6691c27","_type":"item","_id":"513fceb475b8dbbc21000f94","_score":11.673948,"fields":{"item_name":"Apple
+        - 1 cup slices","nf_calories":56.68}},{"_index":"f762ef22-e660-434f-9071-a10ea6691c27","_type":"item","_id":"513fceb475b8dbbc21000f92","_score":11.673489,"fields":{"item_name":"Apple
+        - 1 medium (3\" dia)","nf_calories":94.64}},{"_index":"f762ef22-e660-434f-9071-a10ea6691c27","_type":"item","_id":"513fceb475b8dbbc21000f95","_score":11.651828,"fields":{"item_name":"Apple
+        - 1 cup, quartered or chopped","nf_calories":65}},{"_index":"f762ef22-e660-434f-9071-a10ea6691c27","_type":"item","_id":"513fceb475b8dbbc21000f90","_score":11.578816,"fields":{"item_name":"Apple
+        - 1 extra small (2-1/2\" dia)","nf_calories":52.52}},{"_index":"f762ef22-e660-434f-9071-a10ea6691c27","_type":"item","_id":"513fceb475b8dbbc21000f93","_score":11.453328,"fields":{"item_name":"Apple
+        - 1 large (3-1/4\" dia)","nf_calories":115.96}},{"_index":"f762ef22-e660-434f-9071-a10ea6691c27","_type":"item","_id":"513fceb475b8dbbc21000f97","_score":11.361858,"fields":{"item_name":"Apples,
+        raw, without skin - 1 medium (3\" dia)","nf_calories":77.28}},{"_index":"f762ef22-e660-434f-9071-a10ea6691c27","_type":"item","_id":"513fceb475b8dbbc21000f99","_score":11.290293,"fields":{"item_name":"Apples,
+        raw, without skin - 1 cup slices","nf_calories":52.8}},{"_index":"f762ef22-e660-434f-9071-a10ea6691c27","_type":"item","_id":"513fceb475b8dbbc21000f8f","_score":11.253425,"fields":{"item_name":"Apple
+        - 1 NLEA serving","nf_calories":125.84}},{"_index":"f762ef22-e660-434f-9071-a10ea6691c27","_type":"item","_id":"513fceb475b8dbbc21000f98","_score":11.18282,"fields":{"item_name":"Apples,
+        raw, without skin - 1 large (3-1/4\" dia)","nf_calories":103.68}},{"_index":"f762ef22-e660-434f-9071-a10ea6691c27","_type":"item","_id":"513fceb475b8dbbc21000f91","_score":11.100179,"fields":{"item_name":"Apple
+        - 1 small (2-3/4\" dia)","nf_calories":77.48}}]}'
     http_version: 
-  recorded_at: Thu, 25 Feb 2016 18:20:50 GMT
+  recorded_at: Thu, 25 Feb 2016 22:49:07 GMT
 recorded_with: VCR 3.0.1

@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h2><%= link_to meal.meal_type, meal %></h2>
+    <%= link_to "Remove", meal, class: "btn btn-danger", method: :delete %>
+
+    <table class="table">
+
+      <thead>
+        <th>Name</th>
+        <th>Calories</th>
+        <th>Quantity</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </thead>
+
+      <tbody>
+        <% meal.foods.each do |food| %>
+          <tr>
+            <td><%= food.name %></td>
+            <td><%= food.calories %></td>
+            <td><%= food.quantity %></td>
+            <td><%= link_to "Edit", edit_meal_food_path(meal, food) %></td>
+            <td><%= link_to "Delete", [meal,food], method: :delete %></td>
+          </tr>
+        <% end %>
+      </tbody>
+
+    </table>
+  </div>
+</div>
+
+
