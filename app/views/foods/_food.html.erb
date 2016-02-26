@@ -2,5 +2,6 @@
   <td><%= food.name %></td>
   <td><%= food.calories %></td>
   <td><%= food.quantity %></td>
+  <td><%= link_to "Edit", edit_meal_food_path(@meal, food) %></td>
   <td><%= link_to "Delete", [@meal, food], method: :delete %></td>
 </tr>

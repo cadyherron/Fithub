@@ -1,7 +1,6 @@
 class Nutritionix
   def initialize
     @appId = Rails.application.secrets.app_id
-    p @appId
     @appKey = Rails.application.secrets.app_key
     @site = 'https://api.nutritionix.com/v1_1/search/'
   end

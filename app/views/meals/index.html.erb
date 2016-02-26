@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="page-header">
+      All Meals
+      <span class="pull-right">
+        <%= current_user.total_calories %> Cals
+      </span>
+    </h1>
+  </div>
+</div>
+
+<%= render current_user.meals %>
