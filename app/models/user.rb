@@ -58,4 +58,12 @@ class User < ActiveRecord::Base
     self.avatar = open(url)
   end
 
+  def avg_calories_per_day
+    meals.where("meals.created_at >= ?", self.created_at.strftime("%F")).joins(:foods).sum("CAST(calories AS FLOAT)") / (self.created_at - Date.today)
+
+  end
+
+
+
+
 end

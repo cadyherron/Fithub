@@ -23,11 +23,6 @@ ActiveRecord::Schema.define(version: 20160226001037) do
     t.datetime "updated_at",        null: false
   end
 
-  create_table "dashboards", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
     t.integer  "attempts",   default: 0, null: false
