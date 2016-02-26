@@ -14,6 +14,7 @@ class UserActivitiesController < ApplicationController
   def create
     @user_activity = UserActivity.new(user_activity_params)
     @user_activity.user_id = current_user.id
+    @user_activities = UserActivity.user_activties_for_today(current_user)
 
     if @user_activity.save
       flash[:success] = "Activity Logged!"
