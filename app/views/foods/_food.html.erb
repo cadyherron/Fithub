@@ -3,5 +3,5 @@
   <td><%= food.calories %></td>
   <td><%= food.quantity %></td>
   <td><%= link_to "Edit", edit_meal_food_path(@meal, food) %></td>
-  <td><%= link_to "Delete", [@meal, food], method: :delete %></td>
+  <td><%= link_to "Delete", [@meal, food], method: :delete, data: {confirm: "Are you sure you want to delete this?"} %></td>
 </tr>

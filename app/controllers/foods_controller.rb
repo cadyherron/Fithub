@@ -1,5 +1,6 @@
 class FoodsController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource :meal
+  load_and_authorize_resource through: :meal
 
   def search
     @meal = Meal.find(params[:meal_id])
@@ -11,14 +12,19 @@ class FoodsController < ApplicationController
     @foods = Nutritionix.new.search(@food_search)
   end
 
-  def add_to_meal
+  def create
     @meal = Meal.find(params[:meal_id])
-    food = @meal.foods.build(food_params)
-    if food.save
+    @food = @meal.foods.build(food_params)
+    if @food.save
       redirect_to @meal
     else
-      redirect_to :back
+      render :new
     end
+  end
+
+  def new
+    @meal = Meal.find(params[:meal_id])
+    @food = @meal.foods.build
   end
 
   def edit
@@ -30,9 +36,11 @@ class FoodsController < ApplicationController
     @meal = Meal.find(params[:meal_id])
     @food = Food.find(params[:id])
     if @food.update(food_params)
+      flash[:notice] = "Food updated!"
       redirect_to @meal
     else
-      redirect_to :back
+      flash[:alert] = "Food could not be updated"
+      render :edit
     end
   end
 

@@ -1,10 +1,10 @@
 class Goal < ActiveRecord::Base
-
   enum goal_types: ["Calories Burned", "Calories Consumed"]
   belongs_to :user
   validates :goal_type, inclusion: { in: Goal.goal_types , message: 'Nice try, YOU SNEAKY SNEAK!'}
   validates :goal_type, :end_date, :user, :target_amount, presence: true
-  validates :target_amount, numericality: { greater_than: 99 , message: 'must be greater than 99, PAIN IS WEAKNESS LEAVING THE BODY' }
+  validates :target_amount, numericality: { greater_than: 99 , message: 'must be greater than 99. PAIN IS WEAKNESS LEAVING THE BODY' }
+  validates :target_amount, numericality: { less_than: 999999 , message: 'must be less that 999,999. WHY DO YOU WISH TO BECOME NOTHING? ' }
   validate :end_date_is_in_the_future
   scope :available, -> { where('end_date >= ?', Date.today) }
   scope :unavailable, -> { where('end_date < ?', Date.today) }
