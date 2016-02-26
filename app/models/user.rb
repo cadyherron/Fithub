@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
   end
 
   def calories_consumed(start_date,end_date)
-    meals.where(created_at: start_date..end_date).joins(:foods).sum(:calories)
+    meals.where(created_at: start_date..end_date).joins(:foods).sum("calories * quantity")
   end
 
   def total_calories
