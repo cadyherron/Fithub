@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   include Searchable
 
+  has_attached_file :avatar, :styles => { :large => "500x500", :medium => "350x350", :thumb => "200x200" }
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
   has_many :meals, dependent: :destroy
  
   has_many :user_activities
