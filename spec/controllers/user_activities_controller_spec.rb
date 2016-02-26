@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 
-
 describe UserActivitiesController do
 
   describe 'with_logged_in_user' do
@@ -49,4 +48,3 @@ describe UserActivitiesController do
 
   end
 end
-
