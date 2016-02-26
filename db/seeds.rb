@@ -84,17 +84,19 @@ end
 
 
 
-puts "Creating foods..."
+puts "Creating foods for meals..."
 
-(MULTIPLIER*10).times do
+(MULTIPLIER*2).times do
+  Meal.all.each do |meal|
   Food.create(
     name: Faker::Beer.name,
     calories: rand(1..600),
     sodium: rand(1..600),
     brand: Faker::Company.name,
-    meal_id: Meal.pluck(:id).sample,
+    meal_id: meal.id,
     quantity: rand(1..10)
     )
+  end
 end
 
 
