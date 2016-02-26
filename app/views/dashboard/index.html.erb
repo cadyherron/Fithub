@@ -25,15 +25,15 @@
 
 
   <div class="row spacer">
-
+  <h3>Your Statistics:</h3>
     <div class='col-sm-4'>
 
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Total Calories Consumed</h3>
+          <h3 class="panel-title">Calories Burned Today:</h3>
         </div>
         <div class="panel-body">
-          ONE BILLION
+          <%= current_user.user_activities.sum(:calories) %> Calories
         </div>
       </div>
 
@@ -44,10 +44,10 @@
     
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Total Calories Burned</h3>
+          <h3 class="panel-title">Calories Eaten Today:</h3>
         </div>
         <div class="panel-body">
-          ONE BILLION
+          ___ Calories
         </div>
       </div>
 
@@ -75,5 +75,9 @@
 
   </div> <!-- row -->
 
+
+  <div class="row spacer">
+  <h3>All Users' Statistics:</h3>
+  </div>
 
 </div> <!-- container -->
