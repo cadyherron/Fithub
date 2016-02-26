@@ -1,5 +1,17 @@
   <div class="row">
-    
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-6">
+        <% if scope == "to-date" %>
+          <h4 class="text-center">WorkOuts Logged To-Date</h4>
+        <% else %>
+          <h4 class="text-center">WorkOuts Logged Today</h4> 
+        <% end %>  
+        <hr>
+      </div>
+    </div>
+
     <div class="col-md-4">
       <button type="button" class="btn btn-primary btn-sm">
         Total Calories Burned:
@@ -18,7 +30,7 @@
   
   </div>
   <br>
-  <table class="table-bordered table-striped">
+  <table class="table-bordered table-striped workout">
       <thead>
         <tr>
 
@@ -40,7 +52,7 @@
           <th>
             <h5 class="label label-primary">Intensity</h5>
           </th>
-          <th>
+          <th class="workout-remove">
             <h5 class="label label-primary">Remove Workout
             </h5>
           </th>
@@ -68,7 +80,7 @@
             <td> 
               <%= user_activity.intensity %>
             </td>
-            <td>
+            <td class="workout-remove">
               <%= link_to "Remove", 
                           user_activity_path(user_activity.id),
                           method: :delete,

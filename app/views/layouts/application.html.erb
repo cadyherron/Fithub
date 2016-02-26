@@ -11,7 +11,11 @@
 <%= render partial: "shared/navbar" %>
 
 <div class="container">
+
+  <%= yield :form_errors %>
+
   <%= render partial: "shared/flash_messages", flash: flash %>
+
   <%= yield %>
 </div>
 
