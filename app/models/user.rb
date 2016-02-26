@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   before_create :generate_token
 
   has_secure_password
-  validates :email, email: true
+  validates :email, email: true, uniqueness: true
   validates :first_name, :last_name, :email, presence: true
 
   validates :password,
