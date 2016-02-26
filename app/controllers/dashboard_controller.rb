@@ -5,6 +5,9 @@ class DashboardController < ApplicationController
 
 
   def index
+    @recent_meals = current_user.meals.limit(5)
+    @recent_workouts = current_user.user_activities.limit(5)
+    @recent_goals = current_user.goals.available.limit(5)
   end
 
 
