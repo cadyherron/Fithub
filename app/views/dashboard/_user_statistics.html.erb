@@ -7,7 +7,7 @@
           <h3 class="panel-title">Calories Burned Today:</h3>
         </div>
         <div class="panel-body">
-          <%= current_user.calories_burned(Date.today, Date.yesterday) %> Calories
+          <%= current_user.calories_burned(Date.yesterday, Date.tomorrow) %> Calories
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
           <h3 class="panel-title">Calories Eaten Today:</h3>
         </div>
         <div class="panel-body">
-          <%= current_user.calories_consumed(Date.yesterday, Date.today) %> Calories
+          <%= current_user.calories_consumed(Date.yesterday, Date.tomorrow) %> Calories
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
       </div>
       <div class="panel-body">
         <ol>
-
+        <%= current_user.avg_calories_per_day %>
         </ol>
       </div>
     </div>

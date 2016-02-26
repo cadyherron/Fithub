@@ -1,8 +1,8 @@
 
-<h3>All Users' Statistics:</h3>
+
 
 <div class="row spacer">
-<h3>Your Statistics:</h3>
+<h3>All Users' Statistics:</h3>
   <div class='col-sm-4'>
 
     <div class="panel panel-default">
@@ -10,6 +10,7 @@
         <h3 class="panel-title">Calories Burned Today:</h3>
       </div>
       <div class="panel-body">
+      <%= UserActivity.sum(:calories) %> Calories
       </div>
     </div>
   </div>
@@ -22,7 +23,7 @@
         <h3 class="panel-title">Calories Eaten Today:</h3>
       </div>
       <div class="panel-body">
-        Calories
+        <%= Food.sum(:calories) %> Calories
       </div>
     </div>
   </div>
