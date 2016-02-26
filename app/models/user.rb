@@ -4,14 +4,6 @@ class User < ActiveRecord::Base
 
   has_attached_file :avatar, :styles => { :large => "500x500", :medium => "350x350", :thumb => "200x200" }
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
-  validates_attachment_file_name :avatar, matches: [/png\Z/, /jpe?g\Z/]
-
-  validates_attachment :avatar, presence: true,
-  content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] },
-  size: { in: 0..10.kilobytes }
-
-  validates_with AttachmentPresenceValidator, attributes: :avatar
-  validates_with AttachmentSizeValidator, attributes: :avatar, less_than: 1.megabytes
 
   has_many :meals, dependent: :destroy
   has_many :goals, dependent: :destroy
@@ -63,9 +55,9 @@ class User < ActiveRecord::Base
   end
 
   def photo_url(url)
-
-    self.avatar = open(url)
-
+    if url =~ URI::regexp
+      self.avatar = open(url)
+    end
   end
 
 end

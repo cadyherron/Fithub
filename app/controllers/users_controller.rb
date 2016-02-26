@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   def upload_avatar
-    if params[:photo_url].any?
+    if params[:photo_url].empty?
       current_user.avatar = params[:avatar]
     else
       current_user.photo_url(params[:photo_url])
