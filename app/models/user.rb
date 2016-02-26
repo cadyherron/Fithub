@@ -66,7 +66,8 @@ class User < ActiveRecord::Base
     meals.where("meals.created_at >= ?", self.created_at.strftime("%F")).joins(:foods).sum(:calories) / -(self.created_at.midnight - DateTime.now).to_i
   end
 
-
-
-
+  def self.avg_calories_consumed_per_day(user)
+    sums = self.select("SUM(quantity * calories) as total, cast(users.created_at as date) AS dt").joins("JOIN meals ON users.id = meals.user_id").joins("JOIN foods ON foods.meal_id = meals.id").where("users.id = #{user.id}").group("cast(users.created_at as date)")
+    from(sums).select("dt, AVG(total) as avg").group("dt")
+  end
 end
