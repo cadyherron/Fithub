@@ -3,12 +3,12 @@ class UserActivity < ActiveRecord::Base
 
   belongs_to :activity
   belongs_to :user
-  
+
   validates :duration_minutes, inclusion: { in: 0..1000 }, :allow_nil => true
   validates :intensity, inclusion: { in: %w(Low Medium High),
                         message: "%{value} is not a valid intensity"}
   validates :calories, inclusion: { in: 0..2000 }, :allow_nil => true
- 
+
   validates :user, presence: true
   validates :activity, presence: true
 
@@ -46,4 +46,5 @@ class UserActivity < ActiveRecord::Base
        self.duration_minutes = 0
     end
   end 
+
 end
