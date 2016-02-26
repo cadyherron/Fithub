@@ -51,6 +51,10 @@ class User < ActiveRecord::Base
     self.meals.inject(0) {|sum, meal| sum += meal.total_calories }
   end
 
+  def total_calories_burned
+    self.user_activities.sum(:calories)
+  end
+
   def self.send_welcome_email(id)
     user = User.find(id)
     UserMailer.welcome(user).deliver
@@ -64,6 +68,15 @@ class User < ActiveRecord::Base
 
   def avg_calories_per_day
     meals.where("meals.created_at >= ?", self.created_at.strftime("%F")).joins(:foods).sum(:calories) / -(self.created_at.midnight - DateTime.now).to_i
+  end
+
+  def self.order_by_calories_burned
+    User.joins(:user_activities).group('users.id').order('sum(calories) DESC').select('sum(calories), users.*')
+  end
+
+
+  def self.order_by_calories_consumed
+    User.joins(:meals).joins(:foods).group('users.id').order('sum(calories) DESC').select('sum(calories), users.*')
   end
 
   def self.avg_calories_consumed_per_day(user)
