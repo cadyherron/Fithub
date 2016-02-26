@@ -1,4 +1,5 @@
 class FoodsController < ApplicationController
+  load_and_authorize_resource
 
   def search
     @meal = Meal.find(params[:meal_id])

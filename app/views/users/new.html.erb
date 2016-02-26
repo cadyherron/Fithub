@@ -1,5 +1,22 @@
-Already a user? <%= link_to "Sign In", new_session_path %>
+<div class="col-sm-6 col-sm-offset-3">
 
-<h1>New User - Sign Up</h1>
+  <h1 class="text-center">Welcome to FitHub!</h1>
 
-<%= render 'form' %>
+  <br>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <strong>New User - Sign Up</strong>
+      </div>
+    </div>
+
+    <div class="panel-body">
+      <%= render 'form' %>
+    </div>
+
+    <div class="panel-footer">
+      Already a user? <%= link_to "Sign In", new_session_path %>
+  </div>
+  </div>
+</div>

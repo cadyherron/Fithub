@@ -1,4 +1,5 @@
 class GoalsController < ApplicationController
+  load_and_authorize_resource
 
   def index
     @available_goals = current_user.goals.available
@@ -6,7 +7,6 @@ class GoalsController < ApplicationController
   end
 
   def new
-    @goal = Goal.new
   end
 
   def create
@@ -17,6 +17,13 @@ class GoalsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    if @goal.destroy
+      flash[:notice] = "Goal destroyed!"
+    end
+    redirect_to :back
   end
 
   private

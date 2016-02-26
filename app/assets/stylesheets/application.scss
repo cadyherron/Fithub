@@ -54,6 +54,10 @@ input.btn.btn-default.btn-xl.btn-block {
 }
 
 
+.flash-message {
+  cursor: pointer;
+}
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap-datepicker3";

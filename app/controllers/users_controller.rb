@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  load_and_authorize_resource
 
   skip_before_action :require_login,   :only => [ :new, :create ]
   before_action :require_current_user, :only => [ :edit, :update, :destroy ]
@@ -8,11 +8,9 @@ class UsersController < ApplicationController
     @users = User.search(params[:query])
   end
 
-
   def new
     @user = User.new
   end
-
 
   def create
     @user = User.new(user_params)
@@ -20,7 +18,7 @@ class UsersController < ApplicationController
       User.delay.send_welcome_email(@user.id)
       sign_in(@user)
       flash[:success] = "Created new user!"
-      redirect_to @user
+      redirect_to root_url
     else
       flash.now[:error] = "Failed to Create User!"
       render :new
@@ -30,7 +28,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find( params[:id] )
   end
-
 
   def edit
     @user = User.find( params[:id] )
@@ -52,7 +49,7 @@ class UsersController < ApplicationController
 
   def update
 
-    if current_user.update(user_params) 
+    if current_user.update(user_params)
       flash[:success] = "Successfully updated your profile"
       redirect_to current_user
     else
@@ -71,8 +68,6 @@ class UsersController < ApplicationController
     end
   end
 
-
-
   private
 
   def photo_params
@@ -82,8 +77,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit( :first_name, :last_name, :email, :password, :password_confirmation, :avatar, :photo_url)
   end
-
-
-
-
 end
