@@ -1,49 +1,81 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h3>All Users' Statistics</h3>
+    <hr>
+    <div class="row">
 
-
-
-<div class="row spacer">
-<h3>All Users' Statistics:</h3>
-  <div class='col-sm-4'>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Calories Burned Today:</h3>
+      <div class='col-sm-4'>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Calorie Stats</h3>
+          </div>
+          <table class="table">
+            <thead>
+              <th>Statistic</th>
+              <th>Value</th>
+            </thead>
+              <tr>
+                <td>
+                  Calories Eaten Today
+                </td>
+                <td>
+                  <%= Food.sum(:calories) %> Calories
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Calories Burned Today
+                </td>
+                <td>
+                  <%= UserActivity.sum(:calories) %> Calories
+                </td>
+              </tr>
+          </table>
+        </div>
       </div>
-      <div class="panel-body">
-      <%= UserActivity.sum(:calories) %> Calories
+
+
+      <div class='col-sm-4'>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Lead Calorie Consumers</h3>
+          </div>
+          <table class="table">
+            <thead>
+              <th>Name</th>
+              <th>Total Calories</th>
+            </thead>
+            <% User.order_by_calories_consumed.limit(5).each do |user| %>
+              <tr>
+                <td><%= user.full_name %></td>
+                <td><%= user.sum %></td>
+              </tr>
+            <% end %>
+          </table>
+        </div>
       </div>
+
+      <div class='col-sm-4'>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Lead Calorie Burners</h3>
+          </div>
+          <table class="table">
+            <thead>
+              <th>Name</th>
+              <th>Total Calories</th>
+            </thead>
+            <% User.order_by_calories_burned.limit(5).each do |user| %>
+              <tr>
+                <td><%= user.full_name %></td>
+                <td><%= user.sum %></td>
+              </tr>
+            <% end %>
+          </table>
+        </div>
+      </div>
+
     </div>
   </div>
-
-
-  <div class='col-sm-4'>
-  
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Calories Eaten Today:</h3>
-      </div>
-      <div class="panel-body">
-        <%= Food.sum(:calories) %> Calories
-      </div>
-    </div>
-  </div>
-
-
-<div class='col-sm-4'>
-
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">Lead Goal Crushers</h3>
-    </div>
-    <div class="panel-body">
-      <ol>
-        <li>Deepa</li>
-        <li>John</li>
-        <li>Kit</li>
-        <li>Thomas</li>
-        <li>Julia</li>
-      </ol>
-    </div>
-  </div>
-
 </div>
+
