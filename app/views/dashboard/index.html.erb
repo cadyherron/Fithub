@@ -1,19 +1,11 @@
-<<<<<<< HEAD
 <div class="container">
   <div class="row">
     <div class="col-sm-3 text-center">
-      <%= image_tag 'user_silhouette_generic.gif' %>
+      <%= render partial: "/shared/avatar" %>
       <h3>Welcome, <%= current_user.first_name %>!</h3>
       <%= link_to "Edit Profile", edit_user_path(current_user) %>
     </div>
-=======
-<div class="row">
-  <div class="col-sm-3 text-center">
-    <%= image_tag 'user_silhouette_generic.gif' %>
-    <h3>Welcome, <%= current_user.first_name %>!</h3>
-    <%= link_to "Edit Profile", edit_user_path(current_user) %>
-  </div>
->>>>>>> master
+
 
   <div class="col-sm-9">
     <div class="col-sm-4 spacer">
@@ -25,49 +17,42 @@
       <%= button_to "Add a new workout", new_user_activity_path, class: "btn btn-default btn-xl btn-block", method: :get %>
     </div>
 
-<<<<<<< HEAD
-      <div class="col-sm-4 spacer">
-      <%= button_to "Add a new goal", {}, class: "btn btn-default btn-xl btn-block", method: :get  %>
-      </div>
-    </div> <!-- new buttons -->
-=======
+
     <div class="col-sm-4 spacer">
       <%= button_to "Add a new goal", new_goal_path, class: "btn btn-default btn-xl btn-block", method: :get  %>
     </div>
   </div> <!-- new buttons -->
->>>>>>> master
+
 
 </div> <!-- row -->
 
 
-<div class="row spacer">
+  <div class="row spacer">
+  <h3>Your Statistics:</h3>
+    <div class='col-sm-4'>
 
-  <div class='col-sm-4'>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Total Calories Consumed</h3>
-      </div>
-      <div class="panel-body">
-        ONE BILLION
-      </div>
-    </div>
-
-  </div>
-
-
-  <div class='col-sm-4'>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Total Calories Burned</h3>
-      </div>
-      <div class="panel-body">
-        ONE BILLION
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Calories Burned Today:</h3>
+        </div>
+        <div class="panel-body">
+          <%= current_user.user_activities.sum(:calories) %> Calories
+        </div>
       </div>
     </div>
 
-  </div>
+
+    <div class='col-sm-4'>
+    
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Calories Eaten Today:</h3>
+        </div>
+        <div class="panel-body">
+          ___ Calories
+        </div>
+      </div>
+    </div>
 
 
   <div class='col-sm-4'>
@@ -90,3 +75,9 @@
   </div>
 
 
+
+  <div class="row spacer">
+  <h3>All Users' Statistics:</h3>
+  </div>
+
+</div> <!-- container -->

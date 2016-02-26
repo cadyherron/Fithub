@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   resources :user_activities
   resources :dashboard, only: [:index]
 
-  resources :users
+  resources :users do
+    post 'upload_avatar'
+  end
   resource :session, only: [:new, :create, :destroy]
   get "login" => "sessions#new"
   delete "logout" => "sessions#destroy"

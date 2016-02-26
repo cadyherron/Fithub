@@ -1,0 +1,5 @@
+<% if current_user.avatar_file_name.nil? %>
+  <%= image_tag 'user_silhouette_generic.gif', class: "img-responsive" %>
+<% else %>
+  <%= image_tag current_user.avatar.url(:medium), class: "img-responsive thumbnail" %>
+<% end %>

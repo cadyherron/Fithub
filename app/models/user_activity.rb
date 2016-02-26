@@ -1,5 +1,8 @@
 class UserActivity < ActiveRecord::Base
+
   before_create :fill_in_nill
+
+  include Analytics
 
   belongs_to :activity
   belongs_to :user
