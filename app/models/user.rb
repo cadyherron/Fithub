@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :email, email: true, uniqueness: true
   validates :first_name, :last_name, :email, presence: true
+  validates :first_name, :last_name, length: { in: 0..20}
+  validates :email, length: { in: 0..40}
 
   validates :password,
             :length => {:in => 6..40 },
