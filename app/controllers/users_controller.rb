@@ -43,7 +43,8 @@ class UsersController < ApplicationController
     if current_user.save
       redirect_to current_user
     else
-
+      flash[:failure] = "Uploading photo failed"
+      redirect_to :back
     end
   end
 
@@ -77,4 +78,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit( :first_name, :last_name, :email, :password, :password_confirmation, :avatar, :photo_url)
   end
+
 end
