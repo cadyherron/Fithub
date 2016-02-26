@@ -1,7 +1,8 @@
 class GoalsController < ApplicationController
 
   def index
-    @goals = current_user.goals
+    @available_goals = current_user.goals.available
+    @unavailable_goals = current_user.goals.unavailable
   end
 
   def new
@@ -12,7 +13,7 @@ class GoalsController < ApplicationController
     @goal = current_user.goals.new(goal_params)
     if @goal.save
       flash[:notice] = "Goal created successfully!"
-      redirect_to root_path
+      redirect_to goals_path
     else
       render :new
     end

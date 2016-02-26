@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   include Searchable
 
   has_many :meals, dependent: :destroy
+  has_many :goals, dependent: :destroy
 
   has_many :user_activities
 

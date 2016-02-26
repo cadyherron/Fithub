@@ -18,17 +18,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Home", dashboard_index_path(current_user) %></li>
-        <li><%= link_to "Meals", root_path %></li>
-        <li><%= link_to "Workouts", root_path %></li>
-        <li><%= link_to "Goals", goals_path %></li>
-
         <% if current_user %>
         <li><%= link_to "Home", dashboard_index_path %></li>
         <li><%= link_to "Meals", meals_path %></li>
 
         <li><%= link_to "Workouts", user_activities_path %></li>
-        <li><%= link_to "Goals", root_path %></li>
+        <li><%= link_to "Goals", goals_path %></li>
           <li><%= link_to "Logout", logout_path, :method => :delete %></li>
         <% else %>
           <li><%= link_to "Login", root_path %></li>

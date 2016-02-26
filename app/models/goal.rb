@@ -5,6 +5,13 @@ class Goal < ActiveRecord::Base
   validates :goal_type, :end_date, :user, :target_amount, presence: true
   validate :end_date_is_in_the_future
   before_validation :parse_end_date
+  scope :available, -> { where('end_date > ?', Date.today) }
+  scope :unavailable, -> { where('end_date <= ?', Date.today) }
+
+
+  def self.active
+
+  end
 
   def parse_end_date
     unless end_date.is_a? DateTime
@@ -20,6 +27,11 @@ class Goal < ActiveRecord::Base
   end
 
   def percent_complete
-    user.calories_burned(created_at, end_date.end_of_day)
+    (user.calories_burned(created_at, end_date.end_of_day) / target_amount.to_f) * 100
   end
+
+  def complete
+    percent_complete >= 100
+  end
+
 end

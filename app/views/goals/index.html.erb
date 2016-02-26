@@ -1,7 +1,16 @@
 <h1>Your Goals</h1>
 
 
+<%= button_to "Add a new goal", new_goal_path, class: "btn btn-default btn-xl", method: :get  %>
 
+<br>
+
+<h3>Active Goals</h3>
 <div class="list-group">
-  <%= render @goals %>
+  <%= render @available_goals %>
+</div>
+
+<h3>Past Goals</h3>
+<div class="list-group">
+  <%= render @unavailable_goals %>
 </div>
