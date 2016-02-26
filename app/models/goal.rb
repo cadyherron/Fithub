@@ -1,4 +1,5 @@
 class Goal < ActiveRecord::Base
+
   enum goal_types: ["Calories Burned", "Calories Consumed"]
   belongs_to :user
   validates :goal_type, inclusion: { in: Goal.goal_types , message: 'Nice try, YOU SNEAKY SNEAK!'}

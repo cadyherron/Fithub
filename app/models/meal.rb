@@ -4,7 +4,6 @@ class Meal < ActiveRecord::Base
   accepts_nested_attributes_for :foods
 
 
-
   def total_calories
     self.foods.inject(0) {|sum, food| sum += (food.quantity.to_i * food.calories.to_i) }
   end

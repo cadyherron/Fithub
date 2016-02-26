@@ -1,4 +1,5 @@
 class GoalsController < ApplicationController
+  load_and_authorize_resource
 
   def index
     @available_goals = current_user.goals.available
@@ -6,7 +7,6 @@ class GoalsController < ApplicationController
   end
 
   def new
-    @goal = Goal.new
   end
 
   def create
@@ -20,7 +20,6 @@ class GoalsController < ApplicationController
   end
 
   def destroy
-    @goal = Goal.find(params[:id])
     if @goal.destroy
       flash[:notice] = "Goal destroyed!"
     end

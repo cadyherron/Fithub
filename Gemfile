@@ -69,6 +69,7 @@ gem 'inline_svg'
 gem 'simple_form'
 gem 'bootstrap-datepicker-rails'
 gem 'cancancan'
+gem 'email_validator'
 
 
 
