@@ -1,11 +1,10 @@
+require 'active_support/concern'
+
 module Analytics
   extend ActiveSupport::Concern
 
-  def current_user_workouts
+  module ClassMethods
   end
-
-
-
 
 
 

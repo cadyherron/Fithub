@@ -1,10 +1,12 @@
 class User < ActiveRecord::Base
   include Searchable
+  include Analytics
 
   has_many :meals, dependent: :destroy
   has_many :goals, dependent: :destroy
-
+  has_many :foods, through: :meals
   has_many :user_activities
+
 
   before_create :generate_token
 
@@ -47,4 +49,5 @@ class User < ActiveRecord::Base
     user = User.find(id)
     UserMailer.welcome(user).deliver
   end
+
 end

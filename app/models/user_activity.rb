@@ -1,4 +1,5 @@
 class UserActivity < ActiveRecord::Base
+  include Analytics
 
   belongs_to :activity
   belongs_to :user
@@ -14,5 +15,9 @@ class UserActivity < ActiveRecord::Base
   def self.user_activties_for_today(user)
     today = Time.new.strftime('%Y-%m-%d')
     user.user_activities.where("created_at.strftime('%Y-%m-%d')" == today)
-  end
+
+  end 
+
+
+
 end
