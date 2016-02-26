@@ -1,7 +1,15 @@
 <h1>Meal</h1>
 
-<%= form_tag search_meal_foods_path(@meal), method: :get do %>
-  <%= label_tag :food_search %>
-  <%= text_field_tag :food_search %>
-  <%= submit_tag "Search" %>
-<%end%>
+<div class= "row">
+  <div class="col-sm-6 form-group">
+    <%= form_for @meal do |meal| %>
+      <p>
+        <%= meal.label :meal_type %>
+        <%= meal.text_field :meal_type, class: "form-control" %>
+      </p>
+      <p>
+        <%= meal.submit "Create Meal", class: "btn btn-primary" %>
+      </p>
+    <% end %>
+  </div>
+</div>

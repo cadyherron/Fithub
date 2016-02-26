@@ -26,6 +26,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'faker'
 
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -34,6 +35,7 @@ gem 'faker'
 
 group :production do
   gem 'rails_12factor'
+  gem 'daemons'
 end
 
 group :development do
@@ -44,6 +46,8 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'launchy'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development, :test do

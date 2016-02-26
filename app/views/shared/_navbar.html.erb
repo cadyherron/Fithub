@@ -23,7 +23,12 @@
         <li><%= link_to "Workouts", root_path %></li>
         <li><%= link_to "Goals", goals_path %></li>
 
-        <% if signed_in_user? %>
+        <% if current_user %>
+        <li><%= link_to "Home", dashboard_index_path %></li>
+        <li><%= link_to "Meals", meals_path %></li>
+
+        <li><%= link_to "Workouts", user_activities_path %></li>
+        <li><%= link_to "Goals", root_path %></li>
           <li><%= link_to "Logout", logout_path, :method => :delete %></li>
         <% else %>
           <li><%= link_to "Login", root_path %></li>
@@ -34,11 +39,12 @@
       <div class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <div class="search-bar">
-          <!-- TODO: switch to users_path -->
+          <% if current_user %>
             <%= form_tag users_path, :method => 'get' do %>
               <%= text_field_tag :query, params[:query], placeholder: "Search for users", class: "form-control" %>
               <%= submit_tag "Go", class: "form-control" %>
             <% end %>
+          <% end %>
           </div>
         </div>
       </div>
