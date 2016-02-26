@@ -21,7 +21,7 @@ class GoalsController < ApplicationController
 
   def destroy
     if @goal.destroy
-      flash[:notice] = "Goal destroyed!"
+      flash[:notice] = "Ambition successfully destroyed..."
     end
     redirect_to :back
   end

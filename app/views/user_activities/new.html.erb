@@ -1,71 +1,29 @@
-
-
 <div class="row">
-  <div class="col-md-3">
-  </div>
-    
-  <div class="col-md-6">      
+  <div class="col-sm-6">
 
-    <%= form_for @user_activity do |f| %>
-      <%= form_errors_for @user_activity %>
-      <br>
-      <table id="log_activity">
-          
-        <tr>
-          <td>
-            <br>
-            <%= f.label 'Workout' %>
-            <%= collection_select(:user_activity, :activity_id, 
-                Activity.all, :id, :name) %>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-             <br>
-             <%= f.label "Workout Level: " %>
-             <%= f.radio_button(:intensity, "Low", checked: true) %>
-             <%= label_tag(:intesity_low, "Low") %>
-             <%= f.radio_button(:intensity, "Medium") %>
-             <%= label_tag(:intensity_medium, "Medium") %>
-             <%= f.radio_button(:intensity, "High") %>
-             <%= label_tag(:intensity_high, "High") %>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <br>
-            <%= f.label "Duration In Minutes: " %>
-            <%= f.number_field :duration_minutes %>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <br>
-            <%= f.label "Calories Burned: " %>
-            <%= f.number_field :calories %>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <br>
-            <%= f.submit "Log your workout" , class: "btn btn-info btn-xs" %>
-          </td>
-        </tr>  
-      </table> 
-
-    <% end %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title">
+          <strong>New Workout</strong>
+        </div>
+      </div>
+      <div class="panel-body">
+        <%= simple_form_for @user_activity do |f| %>
+          <%= form_errors_for @user_activity %>
+          <%= f.input :activity_id, collection:
+            Activity.all, include_blank: false %>
+          <%= f.input :intensity, collection: ['High', 'Medium', 'Low'], as: :radio_buttons %>
+          <%= f.input :duration_minutes, label: "Duration in minutes" %>
+          <%= f.input :calories, label: "Calories burned" %>
+          <%= f.submit "Log your workout", class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
     <br>
-    <%= render partial: 'logged_activities', 
-    locals: {scope: "today"} %>
 
   </div>
-  
-  <div>  
-   <div class="col-md-3">
-  </div>
-
+  <div class="col-sm-6">
+    <%= render partial: 'logged_activities',
+      locals: {scope: "today"} %>
+</div>
 </div>

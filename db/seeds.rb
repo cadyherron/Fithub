@@ -24,11 +24,11 @@ User.delete_all
 
 puts "Creating activities..."
 
-Activity.create(name: "running", calories_per_hour: 800)
-Activity.create(name: "treadmill", calories_per_hour: 750)
-Activity.create(name: "hiking", calories_per_hour: 650)
-Activity.create(name: "jumping rope", calories_per_hour: 960)
-Activity.create(name: "swimming", calories_per_hour: 950)
+Activity.create(name: "Running", calories_per_hour: 800)
+Activity.create(name: "Treadmill", calories_per_hour: 750)
+Activity.create(name: "Hiking", calories_per_hour: 650)
+Activity.create(name: "Jumping Rope", calories_per_hour: 960)
+Activity.create(name: "Swimming", calories_per_hour: 950)
 
 
 

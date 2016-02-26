@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
   resources :goals
   resources :meals do
-    post 'add_food'
     resources :foods do
       collection do
         get 'search'
-        post 'add_to_meal'
       end
     end
   end

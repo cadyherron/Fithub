@@ -1,6 +1,15 @@
-<h1>Suggestions for <%=@food_search%></h1>
+<div class="page-header">
+  <h1>Suggestions for <em>"<%=@food_search%>"</em></h1>
+  <%= link_to @meal, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    Back To Meal
+  <% end %>
+</div>
+
 <div class="row">
   <div class="col-sm-12">
+
+    <% if @foods.any? %>
     <table class="table">
       <thead>
         <th>Name</th>
@@ -8,7 +17,7 @@
       </thead>
       <tbody>
         <% @foods.each do |food| %>
-          <%= form_for food, url: { action: 'add_to_meal' } do |f| %>
+          <%= form_for [@meal, food] do |f| %>
             <tr>
               <td>
                 <div class="form-group">
@@ -29,16 +38,19 @@
                 </div>
               </td>
               <td>
-                
+
                   <button type="submit" class="btn btn-primary search-button">
                     <span class="glyphicon glyphicon-plus"></span>
                   </button>
-  
+
               </td>
             </tr>
           <% end %>
         <% end %>
       </tbody>
     </table>
+  <% else %>
+      <h1>No Results Found</h1>
+  <% end %>
   </div>
 </div>
