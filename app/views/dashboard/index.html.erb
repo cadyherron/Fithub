@@ -1,9 +1,11 @@
-<div class="row">
-  <div class="col-sm-3 text-center">
-    <%= image_tag 'user_silhouette_generic.gif' %>
-    <h3>Welcome, <%= current_user.first_name %>!</h3>
-    <%= link_to "Edit Profile", edit_user_path(current_user) %>
-  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 text-center">
+      <%= render partial: "/shared/avatar" %>
+      <h3>Welcome, <%= current_user.first_name %>!</h3>
+      <%= link_to "Edit Profile", edit_user_path(current_user) %>
+    </div>
 
   <div class="col-sm-9">
     <div class="col-sm-4 spacer">

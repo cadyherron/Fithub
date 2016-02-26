@@ -1,6 +1,22 @@
-<h1>Editing User</h1>
+<div class="row">  
+  <div class="col-sm-6">  
+    <h1>Editing User</h1>
+  </div>
+  <div class="col-sm-6">
+    <h1>Upload Avatar</h1>
+  </div>
+</div>
 
-<%= render 'form' %>
+<div class="row">
+  <div class="col-sm-6">
+    <%= render 'form' %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= render partial: "/shared/avatar" %>
+    <%= render partial: "photo_upload" %>
+  </div>
+</div>
 
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
