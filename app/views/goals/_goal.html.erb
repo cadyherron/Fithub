@@ -5,12 +5,15 @@
     <h4 class='pull-right'><span class="glyphicon glyphicon-thumbs-down"></span></h4>
   <% end %>
   <h4><%= icon_for_goal_type(goal.goal_type)%> <%= goal.goal_type %> <small>Due <%= goal.end_date.strftime("%D") %></small></h4>
+   <span class="label label-default"><%= goal.goal_amount %></span> / 
+   <span class="label label-default"><%= goal.target_amount %></span>
   <% if goal.available? %>
-    <strong><%= distance_of_time_in_words(Time.now, goal.end_date)%></strong> Remaining
+    — <strong><%= distance_of_time_in_words(Time.now, goal.end_date)%></strong> Remaining
   <% else %>
     <strong>Goal Expired</strong>
   <% end %>
   <br>
   <br>
   <%= goal_progress_bar(goal) %>
+  <%= link_to "Give Up", goal, method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure you want to give up like a tiny baby?"} %>
 </div>

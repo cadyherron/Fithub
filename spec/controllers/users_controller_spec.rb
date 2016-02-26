@@ -7,7 +7,7 @@ describe UsersController do
     it "successful create redirects to user show page" do
       #attributes_for is FactoryGirl method
       post :create, :user => attributes_for( :user )
-      expect(response).to redirect_to user_path( assigns(:user) )
+      expect(response).to redirect_to root_path
     end
 
     it "unsuccessful create renders user new page" do

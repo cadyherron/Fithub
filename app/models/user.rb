@@ -14,11 +14,13 @@ class User < ActiveRecord::Base
   before_create :generate_token
 
   has_secure_password
+  validates :email, email: true
+  validates :first_name, :last_name, :email, presence: true
 
   validates :password,
             :length => {:in => 6..40 },
             :allow_nil => true
-            
+
   def full_name
     first_name + " " + last_name
   end
