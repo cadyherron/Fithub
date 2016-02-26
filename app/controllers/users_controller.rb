@@ -49,7 +49,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    if current_user.update(user_params)
+    @user = current_user
+    if @user.update(user_params)
       flash[:success] = 'Successfully updated your profile'
       redirect_to current_user
     else
@@ -83,5 +84,4 @@ class UsersController < ApplicationController
                                  :avatar,
                                  :photo_url)
   end
-
 end
