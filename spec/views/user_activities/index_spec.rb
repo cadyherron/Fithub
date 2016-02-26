@@ -97,7 +97,7 @@ describe "user_activities/index.html.erb" do
 
   end
 
-  it "does show link to show/log workout" do
+  it "does show link to new workout" do
 
     assign(:users, users)
     assign(:user_activities, user_activities)
@@ -106,22 +106,8 @@ describe "user_activities/index.html.erb" do
 
     render
 
-    expect(rendered).to have_content('Low Remove Show/Log workout')
+    expect(rendered).to have_css('input.btn-default.btn-xl', count: 1)
 
   end
-
-  it "does show link to go back to dashboard" do
-
-    assign(:users, users)
-    assign(:user_activities, user_activities)
-    assign(:user_calories, 500)
-    assign(:user_minutes, 150)
-
-    render
-
-    expect(rendered).to have_content('Back to dashboard')
-
-  end
-
 
 end

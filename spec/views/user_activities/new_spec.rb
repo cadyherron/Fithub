@@ -26,8 +26,9 @@ describe "user_activities/new.html.erb" do
 
     render template: 'user_activities/new'
 
-    expect(rendered).to have_content('Log your workout')
+    expect(rendered).to have_css('h1.page-header', count: 1)
 
   end
+
 
 end

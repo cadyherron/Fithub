@@ -51,27 +51,27 @@ describe UserActivity do
         expect(new_user_activity).not_to be_valid
     end
 
-    it "does not allow calories > 2000" do
-        new_user_activity = build(:user_activity, :calories => 2001)
+    it "does not allow calories > 999999" do
+        new_user_activity = build(:user_activity, :calories => 1000000)
         expect(new_user_activity).not_to be_valid
     end
 
-    it "auto populates calories to 0 if it was nil" do
-        new_user_activity = build(:user_activity, :calories => nil)
-        expect(new_user_activity).to be_valid
+    it "to not be 0" do
+        new_user_activity = build(:user_activity, :calories => 0)
+        expect(new_user_activity).to_not be_valid
     end
 
   end
 
   describe 'validates_duration' do  
-    it "does not allow duration > 5000" do
-        new_user_activity = build(:user_activity, :duration_minutes => 5001)
+    it "does not allow duration > 999" do
+        new_user_activity = build(:user_activity, :duration_minutes => 1000)
         expect(new_user_activity).not_to be_valid
     end
     
-    it "auto populates duration to 0 if it was nil" do
-        new_user_activity = build(:user_activity, :duration_minutes => nil)
-        expect(new_user_activity).to be_valid
+    it "not not be 0" do
+        new_user_activity = build(:user_activity, :duration_minutes =>0)
+        expect(new_user_activity).to_not be_valid
     end
 
   end
