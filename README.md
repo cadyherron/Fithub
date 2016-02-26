@@ -3,6 +3,8 @@ Welcome to Fithub!
 ==
 
 <a href="https://codeclimate.com/github/cadyherron/Fithub"><img src="https://codeclimate.com/github/cadyherron/Fithub/badges/gpa.svg" /></a>
+<img src="http://gittens.r15.railsrumble.com//badge/cadyherron/Fithub">
+
 
 Live website hosted on Heroku:
 
