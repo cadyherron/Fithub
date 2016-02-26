@@ -1,0 +1,8 @@
+<div class="list-group-item">
+  <h4 class='pull-right'><small>Calories</small> <span class="label label-default"><%= user_activity.calories %></span></h4>
+  <h4><%= user_activity.activity.name %></h4>
+  <h4>Logged <%= time_ago_in_words(user_activity.created_at)%> ago</h4>
+  <%# <% if user_activity.foods.any? %>
+  <%# <% else %>
+  <%# <% end %>
+</div>

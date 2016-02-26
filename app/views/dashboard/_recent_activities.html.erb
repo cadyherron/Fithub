@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title">
+          Recent Meals
+        </div>
+      </div>
+      <%= render partial: 'dashboard_meal', collection: @recent_meals, as: :meal %>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title">
+          Recent Workouts
+        </div>
+      </div>
+      <%= render @recent_workouts %>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title">
+          Recent Goals
+        </div>
+      </div>
+      <%= render partial: 'dashboard_goal', collection: @recent_goals, as: :goal %>
+    </div>
+  </div>
+</div>
