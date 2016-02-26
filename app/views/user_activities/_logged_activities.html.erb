@@ -11,15 +11,17 @@
     </div>
 
     <div class="col-sm-12 text-center">
-      <button type="button" class="btn btn-primary btn-sm">
-        Total Calories Burned:
-        <span class="badge"> <%= @user_calories %> </span>
-      </button>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default btn-sm">
+          Total Calories Burned:
+          <span class="badge"> <%= @user_calories %> </span>
+        </button>
 
-      <button type="button" class="btn btn-primary btn-sm">
-        Total Workout Minutes:
-        <span class="badge"> <%= @user_minutes %> </span>
-      </button>
+        <button type="button" class="btn btn-default btn-sm">
+          Total Workout Minutes:
+          <span class="badge"> <%= @user_minutes %> </span>
+        </button>
+      </div>
     </div>
 
   </div>
@@ -79,30 +81,12 @@
               <%= link_to "Remove",
                 user_activity_path(user_activity.id),
                 method: :delete,
-                class: "btn btn-warning btn-xs" %>
+                class: "btn btn-warning btn-xs", data: {confirm: "Are you sure you want to delete this?"} %>
           </td>
           </tr>
         <% end %>
       </tbody>
       <table>
-  </div>
-
-  <br>
-
-  <div class="row nav-paths">
-    <div class="col-sm-12 text-center">
-      <% if scope == "to-date" %>
-        <%= link_to "Show/Log workout for today",
-          new_user_activity_path,
-          class: "btn btn-info" %>
-      <% else %>
-        <%= link_to "Show all workouts to date",
-          user_activities_path,
-          class: "btn btn-info" %>
-      <% end %>
-      <%= link_to "Back to dashboard",
-        dashboard_index_path,
-        class: "btn btn-info" %>
   </div>
 
   </div>

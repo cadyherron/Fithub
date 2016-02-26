@@ -1,6 +1,9 @@
 <h1 class="page-header">
   Your Workouts
 </h1>
+
+<%= button_to "New Workout", new_user_activity_path, class: "btn btn-default btn-xl", method: :get  %>
+
 <div class="row">
   <div class="col-md-12">
     <%= render partial: 'logged_activities',

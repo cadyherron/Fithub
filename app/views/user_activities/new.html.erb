@@ -1,3 +1,5 @@
+<h1 class='page-header'>New Workout</h1>
+
 <div class="row">
   <div class="col-sm-6">
 
@@ -9,10 +11,9 @@
       </div>
       <div class="panel-body">
         <%= simple_form_for @user_activity do |f| %>
-          <%= form_errors_for @user_activity %>
           <%= f.input :activity_id, collection:
             Activity.all, include_blank: false %>
-          <%= f.input :intensity, collection: ['High', 'Medium', 'Low'], as: :radio_buttons %>
+          <%= f.input :intensity, collection: ['High', 'Medium', 'Low'], as: :radio_buttons, checked: 'Medium' %>
           <%= f.input :duration_minutes, label: "Duration in minutes" %>
           <%= f.input :calories, label: "Calories burned" %>
           <%= f.submit "Log your workout", class: 'btn btn-primary' %>

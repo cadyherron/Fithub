@@ -1,5 +1,4 @@
 class UserActivity < ActiveRecord::Base
-
   before_create :fill_in_nill
 
   include Analytics
@@ -7,12 +6,12 @@ class UserActivity < ActiveRecord::Base
   belongs_to :activity
   belongs_to :user
 
-  validates :duration_minutes, inclusion: { in: 0..1000 }, :allow_nil => true
   validates :intensity, inclusion: { in: %w(Low Medium High),
                         message: "%{value} is not a High, Low or Medium intensity"}
-  validates :intensity, presence:true 
+  validates :intensity, presence:true
   validates :activity_id, presence:true
-  validates :calories, inclusion: { in: 0..2000 }, :allow_nil => true
+  validates :calories, numericality: { greater_than: 0, less_than: 999999 }
+  validates :duration_minutes, numericality: { greater_than: 0, less_than: 999 }
 
   validates :user, presence: true
   validates :activity, presence: true
