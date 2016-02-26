@@ -2,6 +2,9 @@ class User < ActiveRecord::Base
   include Searchable
   include Analytics
 
+  has_attached_file :avatar, :styles => { :large => "500x500", :medium => "350x350", :thumb => "200x200" }
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
   has_many :meals, dependent: :destroy
   has_many :goals, dependent: :destroy
   has_many :foods, through: :meals
@@ -15,8 +18,7 @@ class User < ActiveRecord::Base
   validates :password,
             :length => {:in => 6..40 },
             :allow_nil => true
-
-
+            
   def full_name
     first_name + " " + last_name
   end
@@ -48,6 +50,10 @@ class User < ActiveRecord::Base
   def self.send_welcome_email(id)
     user = User.find(id)
     UserMailer.welcome(user).deliver
+  end
+
+  def photo_url(url)
+    self.avatar = open(url)
   end
 
 end
