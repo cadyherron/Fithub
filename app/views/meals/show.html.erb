@@ -1,18 +1,23 @@
-<h1 class='page-header'><%= @meal.meal_type %></h1>
+<h1 class='page-header'>
+  <%= @meal.meal_type %>
+  <span class="pull-right">
+    <strong>Total Calories: </strong><%= @meal.total_calories %>
+</span>
+</h1>
 
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-4">
     <%= form_tag search_meal_foods_path(@meal), method: :get, id: 'search_form' do %>
-      <%= label_tag :food_search %>
-      <%= text_field_tag :food_search %>
-      <%= submit_tag "Search" %>
+      <%= label_tag :food_search, "Search / Add Food" %>
+      <div class="input-group">
+        <%= text_field_tag :food_search, nil, class: 'form-control' %>
+        <div class="input-group-btn">
+          <%= submit_tag "Search", class: 'btn btn-default' %>
+        </div>
+      </div>
     <%end%>
   </div>
 
-  <div class="col-sm-6">
-    <strong>Total Calories: </strong><%= @meal.total_calories %>
-  </div>
-  
 </div>
 
 <div class="row">

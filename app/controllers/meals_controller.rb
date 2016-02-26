@@ -13,6 +13,8 @@ class MealsController < ApplicationController
     @meal = current_user.meals.build(meal_params)
     if @meal.save
       redirect_to @meal
+    else
+      render :new
     end
   end
 
@@ -22,7 +24,11 @@ class MealsController < ApplicationController
 
   def update
     @meal = Meal.find(params[:id])
-    @meal.update(meal_params)
+    if @meal.update(meal_params)
+      redirect_to @meal
+    else
+      render :edit
+    end
   end
 
   def destroy
