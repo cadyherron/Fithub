@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   Rails.logger = Logger.new(STDOUT)   
-  config.log_level = :debug
+  config.log_level = :warn
 
   config.paperclip_defaults = {
 

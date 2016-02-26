@@ -66,25 +66,29 @@ User.create(
 
 puts "Creating user_activities..."
 
-(MULTIPLIER*10).times do
-  UserActivity.create(
-    user_id: User.pluck(:id).sample,
-    activity_id: Activity.pluck(:id).sample,
-    intensity: ["Low", "Medium", "High"].sample,
-    calories: rand(1..600),
-    duration_minutes: rand(1..120)
-    )
+(MULTIPLIER*2).times do
+  User.all.each do |user|
+    UserActivity.create(
+      user_id: user.id,
+      activity_id: Activity.pluck(:id).sample,
+      intensity: ["Low", "Medium", "High"].sample,
+      calories: rand(1..600),
+      duration_minutes: rand(1..120)
+      )
+  end
 end
 
 
 
 puts "Creating meals..."
 
-(MULTIPLIER*10).times do 
-  Meal.create(
-    meal_type: ["Breakfast", "Snack", "Lunch", "Dinner"].sample,
-    user_id: User.pluck(:id).sample
-  )
+(MULTIPLIER*2).times do 
+  User.all.each do |user|
+    Meal.create(
+      meal_type: ["Breakfast", "Snack", "Lunch", "Dinner"].sample,
+      user_id: user.id
+    )
+  end
 end
 
 
