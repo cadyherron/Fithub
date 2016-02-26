@@ -2,10 +2,10 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  before_action  :require_login
+  before_action :require_login
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_url, :alert => exception.message
+    redirect_to root_url, alert: exception.message
   end
 
   private
@@ -28,7 +28,9 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    @current_user ||= User.find_by_auth_token(cookies[:auth_token]) if cookies[:auth_token]
+    if cookies[:auth_token]
+      @current_user ||= User.find_by_auth_token(cookies[:auth_token])
+    end
   end
   helper_method :current_user
 
@@ -37,22 +39,17 @@ class ApplicationController < ActionController::Base
   end
   helper_method :signed_in_user?
 
-
-
-
   def require_login
     unless signed_in_user?
-      flash[:error] = "Not authorized, please sign in!"
-      redirect_to login_path  #< Remember this is a custom route
+      flash[:error] = 'Not authorized, please sign in!'
+      redirect_to login_path
     end
   end
 
   def require_current_user
-    # don't forget that params is a string!!!
     unless params[:id] == current_user.id.to_s
-      flash[:error] = "You're not authorized to view this"
+      flash[:error] = 'You are not authorized to view this'
       redirect_to root_url
     end
   end 
-
 end
