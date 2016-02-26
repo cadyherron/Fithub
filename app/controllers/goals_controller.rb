@@ -15,13 +15,16 @@ class GoalsController < ApplicationController
       flash[:notice] = "Goal created successfully!"
       redirect_to goals_path
     else
+      flash[:alert] = "Goal could not be created"
       render :new
     end
   end
 
   def destroy
     if @goal.destroy
-      flash[:notice] = "Goal destroyed!"
+      flash[:notice] = "Ambition successfully destroyed..."
+    else
+      flash[:alert] = "Goal could not be destroyed"
     end
     redirect_to :back
   end
@@ -31,5 +34,4 @@ class GoalsController < ApplicationController
   def goal_params
     params.require(:goal).permit(:goal_type,:target_amount,:end_date)
   end
-
 end

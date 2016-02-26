@@ -24,11 +24,17 @@ User.delete_all
 
 puts "Creating activities..."
 
-Activity.create(name: "running", calories_per_hour: 800)
-Activity.create(name: "treadmill", calories_per_hour: 750)
-Activity.create(name: "hiking", calories_per_hour: 650)
-Activity.create(name: "jumping rope", calories_per_hour: 960)
-Activity.create(name: "swimming", calories_per_hour: 950)
+Activity.create(name: "Running", calories_per_hour: 800)
+Activity.create(name: "Treadmill", calories_per_hour: 750)
+Activity.create(name: "Hiking", calories_per_hour: 650)
+Activity.create(name: "Jumping rope", calories_per_hour: 960)
+Activity.create(name: "Swimming", calories_per_hour: 950)
+Activity.create(name: "Spinning", calories_per_hour: 950)
+Activity.create(name: "Lifting weights", calories_per_hour: 950)
+Activity.create(name: "Kickboxing", calories_per_hour: 950)
+Activity.create(name: "Bikram yoga", calories_per_hour: 950)
+Activity.create(name: "Squash", calories_per_hour: 950)
+Activity.create(name: "Steam room", calories_per_hour: 400)
 
 
 
@@ -60,25 +66,29 @@ User.create(
 
 puts "Creating user_activities..."
 
-(MULTIPLIER*10).times do
-  UserActivity.create(
-    user_id: User.pluck(:id).sample,
-    activity_id: Activity.pluck(:id).sample,
-    intensity: ["Low", "Medium", "High"].sample,
-    calories: rand(1..600),
-    duration_minutes: rand(1..120)
-    )
+(MULTIPLIER*2).times do
+  User.all.each do |user|
+    UserActivity.create(
+      user_id: user.id,
+      activity_id: Activity.pluck(:id).sample,
+      intensity: ["Low", "Medium", "High"].sample,
+      calories: rand(1..600),
+      duration_minutes: rand(1..120)
+      )
+  end
 end
 
 
 
 puts "Creating meals..."
 
-(MULTIPLIER*10).times do 
-  Meal.create(
-    meal_type: ["Breakfast", "Snack", "Lunch", "Dinner"].sample,
-    user_id: User.pluck(:id).sample
-  )
+(MULTIPLIER*2).times do 
+  User.all.each do |user|
+    Meal.create(
+      meal_type: ["Breakfast", "Snack", "Lunch", "Dinner"].sample,
+      user_id: user.id
+    )
+  end
 end
 
 
@@ -98,6 +108,21 @@ puts "Creating foods for meals..."
     )
   end
 end
+
+
+puts "Creating goals..."
+
+(MULTIPLIER*2).times do 
+  User.all.each do |user|
+    Goal.create(
+      user_id: user.id,
+      target_amount: rand(200..600),
+      goal_type: ["Calories Burned", "Calories Consumed"].sample,
+      end_date: Date.tomorrow
+      )
+  end
+end
+
 
 
 

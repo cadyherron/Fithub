@@ -1,0 +1,60 @@
+  <div class="row spacer">
+  <h3>Your Statistics:</h3>
+    <div class='col-sm-3'>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Calories Burned Today:</h3>
+        </div>
+        <div class="panel-body">
+          <%= current_user.calories_burned(Date.yesterday, Date.tomorrow) %> Calories
+        </div>
+      </div>
+    </div>
+
+
+    <div class='col-sm-3'>
+    
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Calories Eaten Today:</h3>
+        </div>
+        <div class="panel-body">
+          <%= current_user.calories_consumed(Date.yesterday, Date.tomorrow) %> Calories
+        </div>
+      </div>
+    </div>
+
+    <div class='col-sm-3'>
+    
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Average Calories Consumed(Daily):</h3>
+        </div>
+        <div class="panel-body">
+          <%= @average_per_day %> Calories
+        </div>
+      </div>
+    </div>
+
+
+  <div class='col-sm-3'>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Your goals:</h3>
+      </div>
+      <div class="panel-body">
+        <ol>
+        <% current_user.goals.each do |goal| %>
+          <% if goal.goal_type == "Calories Consumed" %>
+            <li>Eat less than <%= goal.target_amount %> calories</li>
+            <% else %>
+            <li>Burn <%= goal.target_amount %> Calories</li>
+            <% end %>
+        <% end %>
+        </ol>
+      </div>
+    </div>
+
+  </div>
