@@ -1,19 +1,14 @@
-<%= form_for(@user) do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-  <br>
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
-  <br>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <br>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <br>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-  <br>
-  <%= f.submit %>
+<%= simple_form_for(@user) do |f| %>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= f.input :first_name %>
+    </div>
+    <div class="col-sm-6">
+      <%= f.input :last_name %>
+    </div>
+  </div>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+  <%= f.button :submit %>
 <% end %>
-

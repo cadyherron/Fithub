@@ -66,8 +66,10 @@ gem 'delayed_job_active_record'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk', '>= 2.0.0'
 gem 'inline_svg'
-gem 'chronic'
-gem 'date_validator'
+gem 'simple_form'
+gem 'bootstrap-datepicker-rails'
+gem 'cancancan'
+gem 'email_validator'
 
 
 

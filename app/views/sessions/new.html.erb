@@ -1,32 +1,46 @@
-<h1>Welcome to Fithub!</h1>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h1 class="text-center">Welcome to FitHub!</h1>
 
-<h3 class="spacer">Sign In</h3>
+    <br>
 
-<%= form_tag session_path do %>
+    <div class="panel panel-default">
 
-<%= label_tag do %>
-    Email
-    <%= text_field_tag :email %>
-  <% end %>
+      <div class="panel-heading">
+        <div class="panel-title">
+          <strong>
+            Sign In
+          </strong>
+        </div>
+      </div>
 
-  <%= label_tag do %>
-    Password
-    <%= password_field_tag :password %>
-  <% end %>
+      <div class="panel-body">
+        <%= form_tag session_path do %>
 
-  <%= label_tag do %>
-    Remember me?
-    <%= check_box_tag :remember_me %>
-  <% end %>
+          <div class="form-group">
+            <%= label_tag :email %>
+            <%= text_field_tag :email, "",  class: 'form-control' %>
+          </div>
 
+          <div class="form-group">
+            <%= label_tag :password %>
+            <%= password_field_tag :password, "",  class: 'form-control' %>
+          </div>
 
-  <%= submit_tag "Log in", class: 'btn btn-default' %>
-<% end %>
-
-
-
-<h3 class="spacer">Not a member yet?
-<%= link_to "Sign Up", new_user_path %>
-</h3>
+          <div class="form-group">
+            <%= label_tag :remember_me, "Remember me? " %>
+            <%= check_box_tag :remember_me, class: 'form-control' %>
+          </div>
 
 
+          <%= submit_tag "Log in", class: 'btn btn-default' %>
+        <% end %>
+      </div>
+      <div class="panel-footer">
+        Not a member yet?
+        <%= link_to "Sign Up", new_user_path %>
+      </div>
+    </div>
+
+</div>
+</div>

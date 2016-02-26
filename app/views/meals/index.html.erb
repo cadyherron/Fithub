@@ -6,7 +6,8 @@
         <%= current_user.total_calories %> Cals
       </span>
     </h1>
+    <%= button_to "Add a new meal", new_meal_path, class: "btn btn-default btn-xl", method: :get  %>
   </div>
 </div>
 
-<%= render current_user.meals %>
+<%= render @meals %>
