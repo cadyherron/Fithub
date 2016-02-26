@@ -63,8 +63,7 @@ class User < ActiveRecord::Base
   end
 
   def avg_calories_per_day
-    meals.where("meals.created_at >= ?", self.created_at.strftime("%F")).joins(:foods).sum("CAST(calories AS FLOAT)") / (self.created_at - Date.today)
-
+    meals.where("meals.created_at >= ?", self.created_at.strftime("%F")).joins(:foods).sum(:calories) / -(self.created_at.midnight - DateTime.now).to_i
   end
 
 
