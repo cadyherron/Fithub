@@ -9,4 +9,7 @@ class Meal < ActiveRecord::Base
   def total_calories
     self.foods.inject(0) {|sum, food| sum += (food.quantity.to_i * food.calories.to_i) }
   end
+
+
+
 end

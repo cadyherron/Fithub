@@ -1,6 +1,24 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   
+  config.action_mailer.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'heroku.com',
+    :enable_starttls_auto => true
+  }
+  config.action_mailer.delivery_method ||= :smtp
+
+  # Rails also needs to know where your app is
+  #   located to properly configure sending of emails
+  config.action_mailer.default_url_options = {
+    :host => 'stormy-reef-98752.herokuapp.com',
+  }
+
+
   config.paperclip_defaults = {
 
     # Don't forget to make S3 your storage option!
@@ -11,7 +29,7 @@ Rails.application.configure do
       # put your host name here if needed
       #   see the reading below for more details
       # NOTE: This must be the correct region for YOU
-      :s3_host_name => "s3-us-west-2.amazonaws.com",
+      :s3_host_name => "s3-us-west-1.amazonaws.com",
 
       # NOTE: these lines are changed to use secrets.yml
       # from the examples (which use ENV vars instead)
