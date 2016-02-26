@@ -45,7 +45,7 @@ gem 'figaro'
 gem 'bootstrap-sass'
 gem 'delayed_job_active_record'
 gem "paperclip"
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 gem 'inline_svg'
 gem 'simple_form'
 gem 'bootstrap-datepicker-rails'

@@ -1,4 +1,9 @@
 module ApplicationHelper
+
+  def form_errors_for(object=nil)
+    render('shared/form_errors', object: object) unless object.blank?
+  end
+
   def bootstrap_class_for(flash_type)
   case flash_type
   when "success"
@@ -13,4 +18,5 @@ module ApplicationHelper
     flash_type.to_s
   end
   end
+
 end

@@ -58,6 +58,10 @@ input.btn.btn-default.btn-xl.btn-block {
   cursor: pointer;
 }
 
+//Search buttons
+.search-button {
+  margin-top: 23px;
+}
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-datepicker3";

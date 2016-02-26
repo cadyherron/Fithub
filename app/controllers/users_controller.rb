@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   def upload_avatar
-    unless params[:photo_url].empty?
+    if params[:photo_url].empty?
       current_user.avatar = params[:avatar]
     else
       current_user.photo_url(params[:photo_url])
@@ -43,6 +43,7 @@ class UsersController < ApplicationController
     if current_user.save
       redirect_to current_user
     else
+      flash[:failure] = "Uploading photo failed"
       redirect_to :back
     end
   end
@@ -82,4 +83,5 @@ class UsersController < ApplicationController
                                  :avatar,
                                  :photo_url)
   end
+
 end

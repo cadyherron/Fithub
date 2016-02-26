@@ -7,6 +7,7 @@
   <div class="col-md-6">      
 
     <%= form_for @user_activity do |f| %>
+      <%= form_errors_for @user_activity %>
       <br>
       <table id="log_activity">
           
@@ -22,8 +23,8 @@
         <tr>
           <td>
              <br>
-             <%= f.label "Choose Workout Level: " %>
-             <%= f.radio_button(:intensity, "Low") %>
+             <%= f.label "Workout Level: " %>
+             <%= f.radio_button(:intensity, "Low", checked: true) %>
              <%= label_tag(:intesity_low, "Low") %>
              <%= f.radio_button(:intensity, "Medium") %>
              <%= label_tag(:intensity_medium, "Medium") %>
@@ -57,7 +58,7 @@
       </table> 
 
     <% end %>
-    <br><br>
+    <br>
     <%= render partial: 'logged_activities', 
     locals: {scope: "today"} %>
 

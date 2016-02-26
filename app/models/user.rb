@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :meals, dependent: :destroy
   has_many :goals, dependent: :destroy
   has_many :foods, through: :meals
-  has_many :user_activities
+  has_many :user_activities, -> { order('created_at DESC') }
 
 
   before_create :generate_token
@@ -55,7 +55,9 @@ class User < ActiveRecord::Base
   end
 
   def photo_url(url)
-    self.avatar = open(url)
+    if url =~ URI::regexp
+      self.avatar = open(url)
+    end
   end
 
   def avg_calories_per_day
