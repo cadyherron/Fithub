@@ -1,0 +1,42 @@
+  <div class="row spacer">
+  <h3>Your Statistics:</h3>
+    <div class='col-sm-4'>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Calories Burned Today:</h3>
+        </div>
+        <div class="panel-body">
+          <%= current_user.user_activities.sum(:calories) %> Calories
+        </div>
+      </div>
+    </div>
+
+
+    <div class='col-sm-4'>
+    
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Calories Eaten Today:</h3>
+        </div>
+        <div class="panel-body">
+          <%= current_user.calories_consumed(Date.yesterday, Date.today) %> Calories
+        </div>
+      </div>
+    </div>
+
+
+  <div class='col-sm-4'>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Average Calories Consumed Per Day:</h3>
+      </div>
+      <div class="panel-body">
+        <ol>
+
+        </ol>
+      </div>
+    </div>
+
+  </div>

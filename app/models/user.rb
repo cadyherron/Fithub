@@ -2,8 +2,10 @@ class User < ActiveRecord::Base
   include Searchable
   include Analytics
 
-  has_attached_file :avatar, :styles => { :large => "500x500", :medium => "350x350", :thumb => "200x200" }
+  has_attached_file :avatar, :styles => { :large => "500x500", :medium => "350x350", :thumb => "200x200" }, default_url: 'user_silhouette_generic.gif'
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+  validates_attachment_size :avatar, :in => 0.megabytes..2.megabytes
+
 
   has_many :meals, dependent: :destroy
   has_many :goals, dependent: :destroy
@@ -59,5 +61,13 @@ class User < ActiveRecord::Base
       self.avatar = open(url)
     end
   end
+
+  def avg_calories_per_day
+    meals.where("meals.created_at >= ?", self.created_at.strftime("%F")).joins(:foods).sum("CAST(calories AS FLOAT)") / (self.created_at - Date.today)
+
+  end
+
+
+
 
 end
