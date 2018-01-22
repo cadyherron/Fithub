@@ -44,7 +44,7 @@ gem 'binding_of_caller'
 gem 'figaro'
 gem 'bootstrap-sass'
 gem 'delayed_job_active_record'
-gem "paperclip"
+gem "paperclip", '~>5.1.0'
 gem 'aws-sdk', '< 2.0'
 gem 'inline_svg'
 gem 'simple_form'
